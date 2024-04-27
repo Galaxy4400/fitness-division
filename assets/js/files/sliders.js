@@ -37,19 +37,20 @@ document.querySelectorAll('[data-swiper]').forEach(slider => {
 /**
  * Инициализация слайдера
  */
-const swiper = new Swiper('.slider', {
-	speed: 1500,
-	spaceBetween: 100,
-	slidesPerView: 1,
-	parallax: true,
-	navigation: {
-		prevEl: '.slider__arrow_prev',
-		nextEl: '.slider__arrow_next',
-		disabledClass: "_disabled",
+const swiper = new Swiper('.main-slider', {
+	effect: 'fade',
+	loop: true,
+	autoplay: {
+		delay: 8000,
+		pauseOnMouseEnter: true,
+		disableOnInteraction: false,
 	},
+	speed: 1500,
+	spaceBetween: 0,
+	slidesPerView: 1,
 	pagination: {
-		el: '.slider__pagination',
-		bulletClass: 'slider__bullet',
+		el: '.main-slider__pagination',
+		bulletClass: 'main-slider__bullet',
 		bulletActiveClass: '_active',
 		clickable: true,
 	},

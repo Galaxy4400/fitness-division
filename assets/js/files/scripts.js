@@ -5,5 +5,8 @@ new Adapt();
 const modal = new Modal({animation: 'fadeIn'});
 
 // Инициализация главного меню
-new Menu('menu');
+new Menu('main-menu');
+
+// Инициализация главного меню
+new Menu('top-menu');
 

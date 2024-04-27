@@ -17,13 +17,119 @@
 <body>
 	<div class="wrapper">
 		<header class="header">
-			<div class="header__container _container">
+			<div class="header__top header-top">
+				<div class="header-top__container _container">
+					<div class="header-top__menu">
+						<nav class="top-menu" data-menu="top-menu">
+							<ul class="top-menu__list" data-menu-container="top-menu">
+								<li class="top-menu__item" data-menu-item>
+									<a class="top-menu__link" href="#">О компании</a>
+									<button class="top-menu__arrow _icon-arrow-down" type="button" data-menu-control></button>
+									<ul class="top-menu__sub-list" data-menu-submenu>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 1</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 2</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 3</a></li>
+									</ul>
+								</li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Сервис</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Дилерам</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__socials">
+						<div class="header-socials">
+							<a class="header-socials__social social _icon-wu" href="#"></a>
+							<a class="header-socials__social social _icon-vk" href="#"></a>
+							<a class="header-socials__social social _icon-tg" href="#"></a>
+						</div>
+					</div>
+					<div class="header-top__actions">
+						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
+						<a class="header-request" href="#">Заказать звонок</a>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__container _container">
+					<div class="header-bottom__logo">
+						<a class="header-logo" href="#">
+							<img src="assets/img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="header-bottom__menu">
+						<div class="menu" data-menu="main-menu">
+							<!-- <button class="menu__icon menu-icon" type="button" data-menu-icon="main-menu">≡</button> -->
+							<nav class="menu__body" data-menu-container="main-menu">
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item>
+										<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+										<a class="menu__link" href="#">каталог оборудования</a>
+										<ul class="menu__sub-list" data-menu-submenu>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Свободные веса</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Функциональный тренинг</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Групповые программы</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Fitbench</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">бренды</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link _active" href="#">проекты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header-bottom__actions">
+						<form class="search _active" action="#" method="get">
+							<input class="search__input input" type="text" name="s" placeholder="Поиск">
+							<button class="search__btn _icon-search" type="submit"></button>
+						</form>
+						<a class="header-cart btn _icon-cart" href="#" data-count="2">Корзина</a>
+					</div>
+				</div>
 			</div>
 		</header>
 		
 		<main class="page">
-			<div class="page__container _container">
-			</div>
+			
+			<section class="page__main-slider">
+				<h1 class="_semantic-hidden">Оборудование для фитнес-клубов и тренажерных залов</h1>
+				<div class="main-slider" data-swiper>
+					<div class="main-slider__slides">
+						<article class="main-slider__slide main-slide">
+							<div class="main-slide__container _container">
+								<div class="main-slide__body">
+									<div class="main-slide__contetn">
+										<h2 class="main-slide__title h1">Оборудование для фитнес-клубов и тренажерных залов</h2>
+										<p class="main-slide__desc">Доставим и соберем в течение 2-х недель</p>
+										<a class="main-slide__btn btn" href="#">Получить консультацию</a>
+									</div>
+								</div>
+							</div>
+							<figure class="main-slide__bg _ibg">
+								<img src="assets/img/slide.jpg" alt="slide">
+							</figure>
+						</article>
+						<article class="main-slider__slide main-slide">
+							<div class="main-slide__container _container">
+								<div class="main-slide__body">
+									<div class="main-slide__contetn">
+										<h2 class="main-slide__title h1">Оборудование для фитнес-клубов и тренажерных залов</h2>
+										<p class="main-slide__desc">Доставим и соберем в течение 2-х недель</p>
+										<a class="main-slide__btn btn" href="#">Получить консультацию</a>
+									</div>
+								</div>
+							</div>
+							<figure class="main-slide__bg _ibg">
+								<img src="https://sun9-2.userapi.com/impf/OS1hVNy_h58Pd-Jngo8lnG4J4qQO-3x0TZgE2Q/nagrL7HVLGE.jpg?size=1920x768&quality=95&crop=44,0,1876,749&sign=97d476bd6a9ba9906f2e9da3cf7d1c09&type=cover_group" alt="slide">
+							</figure>
+						</article>
+					</div>
+					<div class="main-slider__pagination"></div>
+				</div>
+			</section>
+
 		</main>
 		
 		<footer class="footer">

@@ -7,13 +7,13 @@
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	font-size: rem(16);
+	font-size: rem(14);
+	font-weight: 700;
 	line-height: 1;
-	padding: em(8) em(22);
-	height: em(40);
+	padding: em(8, 14) em(20, 14);
+	height: em(50, 14);
 	background: var(--color-main);
 	color: #ffffff !important;
-	border-radius: em(4);
 	transition: background-color 0.3s, color 0.3s, box-shadow 0.1s;
 	@media (any-hover: hover) {
 		&:hover {
@@ -70,7 +70,6 @@ textarea {
 	color: #000000;
 	background: #ffffff;
 	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
 	transition: border 0.3s ease 0s;
 	&:focus {
 		border: rem(1) solid var(--color-focus);
