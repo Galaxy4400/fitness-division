@@ -52,7 +52,7 @@ body {
 	color: var(--color-font);
 	background: var(--color-body-background);
 	font-size: rem(16);
-	line-height: prc(21, 16);
+	line-height: 137%;
 	&._lock {
 		overflow: hidden;
 	}
@@ -94,15 +94,18 @@ body {
 	.h3,
 	h3 a,
 	h3 {
-		font-size: rem(28);
-		line-height: prc(33, 28);
+		font-weight: 500;
+		@include adaptiv-value(font-size, 34, 22, 1);
+		line-height: 100%;
 		color: var(--color-titles);
+		font-weight: 900;
+		text-transform: uppercase;
 	}
 	.h4,
 	h4 a,
 	h4 {
-		font-size: rem(21);
-		line-height: prc(24, 21);
+		font-size: rem(16);
+		line-height: 137%;
 		color: var(--color-titles);
 	}
 	.h5,
@@ -230,7 +233,29 @@ body {
 
 	// .page__main-slider
 	&__main-slider {
+		margin: 0px 0px rem(60) 0px;
 	}
+
+	// .page__grid
+	&__grid {
+		margin: 0px 0px rem(80) 0px;
+	}
+	
+	// .page__brands
+	&__brands {
+		margin: 0px 0px rem(80) 0px;
+	}
+	
+	// .page__news
+	&__news {
+		margin: 0px 0px rem(80) 0px;
+	}
+	
+	// .page__partners
+	&__partners {
+		margin: 0px 0px rem(90) 0px;
+	}
+
 }
 
 

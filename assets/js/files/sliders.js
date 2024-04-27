@@ -35,9 +35,9 @@ document.querySelectorAll('[data-swiper]').forEach(slider => {
 
 
 /**
- * Инициализация слайдера
+ * Инициализация главного слайдера
  */
-const swiper = new Swiper('.main-slider', {
+const mainSlider = new Swiper('.main-slider', {
 	effect: 'fade',
 	loop: true,
 	autoplay: {
@@ -55,6 +55,23 @@ const swiper = new Swiper('.main-slider', {
 		clickable: true,
 	},
 });
+
+
+/**
+ * Инициализация слайдера партнеров
+ */
+const partnersSlider = new Swiper('.partners-slider', {
+	speed: 1500,
+	spaceBetween: 70,
+	slidesPerView: 'auto',
+	navigation: {
+		prevEl: '.partners-slider__arrow_prev',
+		nextEl: '.partners-slider__arrow_next',
+		disabledClass: "_disabled",
+	},
+});
+
+
 
 
 

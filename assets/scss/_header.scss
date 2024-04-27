@@ -75,6 +75,7 @@
 		opacity: 0;
 		visibility: hidden;
 		padding: rem(10) rem(15);
+		transform: translateY(rem(10));
 		transition: all 0.3s ease 0s;
 		background: var(--color-main);
 		min-width: rem(150);
@@ -84,6 +85,7 @@
 			opacity: 1;
 			visibility: visible;
 			pointer-events: all;
+			transform: translateY(rem(0));
 		}
 		&::before {
 			content: '';
@@ -169,10 +171,12 @@
 		gap: rem(5);
 		pointer-events: none;
 		z-index: 5;
+		transform: translateY(rem(10));
 		&._visible {
 			opacity: 1;
 			visibility: visible;
 			pointer-events: all;
+			transform: translateY(rem(0));
 		}
 		&::before {
 			content: '';
