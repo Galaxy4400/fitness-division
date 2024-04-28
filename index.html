@@ -2,7 +2,7 @@
 <html lang="ru">
 
 <head>
-	<title>Стартовая сборка</title>
+	<title>Fitness Division</title>
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<link rel="stylesheet" href="assets/css/style.css">
@@ -16,8 +16,8 @@
 
 <body>
 	<div class="wrapper">
-		<header class="header">
-			<div class="header__top header-top">
+		<header class="header" data-fix>
+			<div class="header__top header-top" data-adapt="menu__body,991">
 				<div class="header-top__container _container">
 					<div class="header-top__menu">
 						<nav class="top-menu" data-menu="top-menu">
@@ -46,7 +46,7 @@
 					</div>
 					<div class="header-top__actions">
 						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
-						<a class="header-request" href="#">Заказать звонок</a>
+						<button class="header-request" data-modal-opener="modal-request">Заказать звонок</button>
 					</div>
 				</div>
 			</div>
@@ -59,12 +59,16 @@
 					</div>
 					<div class="header-bottom__menu">
 						<div class="menu" data-menu="main-menu">
-							<!-- <button class="menu__icon menu-icon" type="button" data-menu-icon="main-menu">≡</button> -->
 							<nav class="menu__body" data-menu-container="main-menu">
+								<figure class="menu__logo">
+									<img src="assets/img/logo.svg" alt="logo">
+								</figure>
 								<ul class="menu__list">
 									<li class="menu__item" data-menu-item>
-										<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
-										<a class="menu__link" href="#">каталог оборудования</a>
+										<div class="menu__control">
+											<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+											<a class="menu__link" href="#">каталог оборудования</a>
+										</div>
 										<ul class="menu__sub-list" data-menu-submenu>
 											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
 											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
@@ -81,11 +85,12 @@
 						</div>
 					</div>
 					<div class="header-bottom__actions">
-						<form class="search _active" action="#" method="get">
+						<form class="search _active" action="#" method="get" data-adapt="menu__body,767">
 							<input class="search__input input" type="text" name="s" placeholder="Поиск">
 							<button class="search__btn _icon-search" type="submit"></button>
 						</form>
-						<a class="header-cart btn _icon-cart" href="#" data-count="2">Корзина</a>
+						<a class="header-cart btn _icon-cart" href="#" data-count="2"><span>Корзина</span></a>
+						<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
 					</div>
 				</div>
 			</div>
@@ -103,7 +108,7 @@
 									<div class="main-slide__contetn">
 										<h2 class="main-slide__title h1">Оборудование для фитнес-клубов и тренажерных залов</h2>
 										<p class="main-slide__desc">Доставим и соберем в течение 2-х недель</p>
-										<a class="main-slide__btn btn" href="#">Получить консультацию</a>
+										<button class="main-slide__btn btn" data-modal-opener="modal-consult">Получить консультацию</button>
 									</div>
 								</div>
 							</div>
@@ -117,7 +122,7 @@
 									<div class="main-slide__contetn">
 										<h2 class="main-slide__title h1">Ещё один слайдер</h2>
 										<p class="main-slide__desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, doloribus.</p>
-										<a class="main-slide__btn btn" href="#">Получить консультацию</a>
+										<button class="main-slide__btn btn" data-modal-opener="modal-consult">Получить консультацию</button>
 									</div>
 								</div>
 							</div>
@@ -142,7 +147,7 @@
 								<div class="main-slide__body">
 									<div class="main-slide__contetn">
 										<h2 class="main-slide__title h1">Тестовый слайдер</h2>
-										<a class="main-slide__btn btn" href="#">Получить консультацию</a>
+										<button class="main-slide__btn btn" data-modal-opener="modal-consult">Получить консультацию</button>
 									</div>
 								</div>
 							</div>
@@ -217,7 +222,7 @@
 							<div class="main-brands__column main-brands__column_content">
 								<h2 class="main-brands__title left-line">Бренды</h2>
 								<p class="main-brands__desc">Предлагаем вам широкий ассортимент продукции, который в совокупности с нашими услугами поможет повысить эффективность вашего бизнеса. Официальный поставщик спортивного оборудования на территории СНГ.</p>
-								<a class="main-brands__link btn" href="#">Все бренды</a>
+								<a class="main-brands__link btn" href="#" data-adapt="main-brands__body,991">Все бренды</a>
 							</div>
 							<div class="main-brands__column main-brands__column_brands">
 								<div class="brands">
@@ -390,7 +395,7 @@
 								<div class="footer-info__contacts">
 									<div class="footer-info__address">121467, Москва, ул. Истринская, 8</div>
 									<a class="footer-info__phone" href="tel:84957405100">8 (495) 740-51-00</a>
-									<button class="footer-info__request" type="submit">Заказать звонок</button>
+									<button class="footer-info__request" data-modal-opener="modal-request">Заказать звонок</button>
 									<a class="footer-info__email" href="mailto:info@fitdivision.ru">info@fitdivision.ru</a>
 								</div>
 							</div>
@@ -411,6 +416,18 @@
 	</div>
 
 	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+
+	<div id="modal">
+	
+		<div class="modal-defaut" data-modal="modal-consult">
+			<p class="h2 left-line">Форма заказа консультации</p>
+		</div>
+		
+		<div class="modal-defaut" data-modal="modal-request">
+			<p class="h2 left-line">Форма заказа звонка</p>
+		</div>
+	
+	</div>
 	
 
 	<!-- services -->

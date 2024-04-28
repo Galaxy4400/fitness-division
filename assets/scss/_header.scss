@@ -1,7 +1,22 @@
 .header {
-	margin: 0px 0px rem(25) 0px;
+	position: fixed;
+	z-index: 100;
+	background: #fff;
+	width: 100%;
+	transition: transform 0.3s ease 0s;
+	&._down-scroll {
+		@media (min-width: em($md2+1)) {
+			transform: translateY(rem(-50));
+		}
+	}
+	&._scroll {
+		box-shadow: 0px 4px 8px 0px rgba(34, 60, 80, 0.2);
+	}
 	// .header__top
 	&__top {
+		@media (max-width: em($md2)) {
+			
+		}
 	}
 	// .header__bottom
 	&__bottom {
@@ -11,11 +26,17 @@
 //===============================================================
 .header-top {
 	padding: rem(20) 0px;
+	@media (max-width: em($md3)) {
+		padding: rem(20) 0px rem(40);
+	}
 	// .header-top__container
 	&__container {
 		display: flex;
 		align-items: center;
-		gap: rem(40);
+		gap: rem(20) rem(40);
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+		}
 	}
 	// .header-top__menu
 	&__menu {
@@ -28,17 +49,29 @@
 	&__actions {
 		display: flex;
 		align-items: center;
-		gap: rem(40);
+		gap: rem(20) rem(40);
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+		}
 	}
 }
 
 //===============================================================
 .top-menu {
+	@media (max-width: em($md2)) {
+		display: none;
+	}
 	// .top-menu__list
 	&__list {
 		display: flex;
 		align-items: center;
 		gap: rem(40);
+		@media (max-width: em($md1)) {
+			gap: rem(20);
+		}
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+		}
 	}
 	// .top-menu__item
 	&__item {
@@ -115,16 +148,71 @@
 .menu {
 	// .menu__body
 	&__body {
+		@media (max-width: em($md2)) {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100vh;
+			background: #fff;
+			z-index: 50;
+			transition: all 0.3s ease 0s;
+			transform: translateX(-100%);
+			max-width: 80%;
+			width: rem(290);
+			box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
+			overflow-x: hidden;
+			overflow-y: auto;
+			padding: rem(20) rem(15);
+			display: flex;
+			flex-direction: column;
+			&._active {
+				transform: translateX(0);
+			}
+		}
+	}
+	// .menu__logo
+	&__logo {
+		display: none;
+		@media (max-width: em($md2)) {
+			display: inline-block;
+			margin: 0px 0px rem(35) 0px;
+		}
+	}
+	// .menu__close
+	&__close {
+		display: none;
+		@media (max-width: em($md2)) {
+			display: inline-block;
+			position: absolute;
+			top: rem(10);
+			right: rem(10);
+		}
 	}
 	// .menu__list
 	&__list {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
-		gap: rem(40);
+		justify-content: center;
+		gap: rem(0) rem(40);
+		@media (max-width: em($md1)) {
+			gap: rem(0) rem(20);
+		}
+		@media (max-width: em($md2)) {
+			flex-direction: column;
+			align-items: flex-start;
+			justify-content: flex-start;
+			gap: rem(15);
+			flex: 1 1 auto;
+		}
 	}
 	// .menu__item
 	&__item {
 		position: relative;
+	}
+	// .menu__control
+	&__control {
 		display: flex;
 		align-items: center;
 		gap: rem(7);
@@ -133,12 +221,19 @@
 	&__arrow {
 		color: var(--color-main);
 		font-size: rem(11);
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	// .menu__link
 	&__link {
 		font-weight: 700;
 		text-transform: uppercase;
 		color: inherit;
+		white-space: nowrap;
+		@media (max-width: em($md4)) {
+			white-space: unset;
+		}
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--color-main);
@@ -158,20 +253,22 @@
 	}
 	// .menu__sub-list
 	&__sub-list {
-		position: absolute;
-		top: calc(100% + rem(10));
-		opacity: 0;
-		visibility: hidden;
+		@media (min-width: em($md2+1)) {
+			position: absolute;
+			top: calc(100% + rem(10));
+			min-width: rem(270);
+			opacity: 0;
+			visibility: hidden;
+			transform: translateY(rem(10));
+		}
 		padding: rem(10) rem(15);
 		transition: all 0.3s ease 0s;
 		background: var(--color-main);
-		min-width: rem(270);
 		display: flex;
 		flex-direction: column;
 		gap: rem(5);
 		pointer-events: none;
 		z-index: 5;
-		transform: translateY(rem(10));
 		&._visible {
 			opacity: 1;
 			visibility: visible;
@@ -185,6 +282,12 @@
 			left: 0;
 			width: 100%;
 			height: rem(10);
+		}
+		@media (max-width: em($md2)) {
+			display: none;
+			&._visible {
+				display: block;
+			}
 		}
 	}
 	// .menu__sub-item
@@ -223,12 +326,23 @@
 
 //===============================================================
 .header-bottom {
+	padding: 0px 0px rem(25) 0px;
+	transition: all 0.3s ease 0s;
+	@media (max-width: em($md2)) {
+		padding: rem(15) 0px;
+	}
+	._scroll & {
+		padding-bottom: rem(15);
+	}
 	// .header-bottom__container
 	&__container {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		gap: rem(80);
+		gap: rem(20);
+		@media (max-width: em($md4)) {
+			gap: rem(5);
+		}
 	}
 	// .header-bottom__logo
 	&__logo {
@@ -242,6 +356,9 @@
 		display: flex;
 		align-items: center;
 		gap: rem(20);
+		@media (max-width: em($md4)) {
+			gap: rem(10);
+		}
 	}
 }
 
@@ -256,6 +373,12 @@
 		border: rem(1) solid var(--color-background);
 		font-size: rem(14);
 		min-width: rem(485);
+		@media (max-width: em(1550)) {
+			min-width: rem(250);
+		}
+		@media (max-width: em($md3)) {
+			min-width: auto;
+		}
 	}
 	// .search__btn
 	&__btn {
@@ -264,7 +387,8 @@
 		align-items: center;
 		font-size: rem(20);
 		background: var(--color-background);
-		padding: rem(5) rem(15);
+		padding: rem(5) rem(10);
+		width: rem(50);
 		transition: all 0.3s ease 0s;
 		border: rem(1) solid var(--color-background);
 		@media (any-hover: hover) {
@@ -283,6 +407,7 @@
 	font-weight: 700;
 	font-size: rem(14);
 	color: inherit;
+	white-space: nowrap;
 	@media (any-hover: hover) {
 		&:hover {
 			color: var(--color-main);
@@ -302,6 +427,11 @@
 }
 
 .header-logo {
+	display: inline-block;
+	width: rem(200);
+	@media (max-width: em($md4)) {
+		width: rem(137);
+	}
 }
 
 .header-cart {
@@ -310,6 +440,11 @@
 	gap: rem(8);
 	font-size: rem(14);
 	font-weight: 700;
+	@media (max-width: em(1300)) {
+		span {
+			display: none;
+		}
+	}
 	&::before {
 		font-size: rem(20);
 	}

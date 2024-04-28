@@ -9,6 +9,8 @@
 
 let lazyLoader;
 
+let lastScrollTop = 0;
+
 
 /**
  * Инициализация анимации при скролле
@@ -94,15 +96,25 @@ function headerState() {
 	const currentScroll = window.pageYOffset;
 
 	const header = document.querySelector('header');
+	const page = document.querySelector('.page');
 
 	if (!header) return;
 
 	// Если страница не находится на самом верху, то заголовку добавляется соответствующий класс.
 	if (currentScroll > 0) {
 		header.classList.add('_scroll');
+		page.classList.add('_scroll');
 	} else {
 		header.classList.remove('_scroll');
+		page.classList.remove('_scroll');
 	}
+	
+	if (scrollDirection()) {
+		header.classList.add('_down-scroll');
+	} else {
+		header.classList.remove('_down-scroll');
+	}
+	
 }
 
 
@@ -315,3 +327,22 @@ document.querySelectorAll('[data-dynamic-loader]').forEach(dynamicLoader => {
 	});
 });
 
+
+//===============================================================
+function scrollDirection() {
+	const currentScroll = window.pageYOffset;
+	
+	let direction = 0;
+
+	if (currentScroll > lastScrollTop) {
+		direction = 1;
+	}
+	
+	if (currentScroll < lastScrollTop) {
+		direction -1;
+	}
+
+	lastScrollTop = currentScroll;
+
+	return direction;
+};

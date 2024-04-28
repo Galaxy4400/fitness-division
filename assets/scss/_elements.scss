@@ -71,40 +71,43 @@
  */
 .menu-icon {
 	display: none;
-	@media (max-width: em($md3)) {
-		display: block;
-		position: absolute;
-		top: rem(10);
-		right: rem(140);
-		width: rem(30);
-		height: rem(18);
+	@media (max-width: em($md2)) {
+		display: inline-block;
+		position: relative;
+		width: rem(50);
+		height: rem(50);
 		cursor: pointer;
 		z-index: 5;
+		background: var(--color-main);
+		@media (max-width: em($md4)) {
+			width: rem(40);
+			height: rem(40);
+		}
 		span {
 			transition: all 0.3s ease 0s;
 			top: calc(50% - rem(1));
-			left: 0px;
+			left: 50%;
 			position: absolute;
-			width: 100%;
+			width: rem(16);
 			height: rem(2);
-			background-color: #000;
+			background-color: #fff;
+			transform: translateX(-50%);
 			&:first-child {
-				top: 0px;
+				transform: translate(-50%, rem(-5));
 			}
 			&:last-child {
-				top: auto;
-				bottom: 0px;
+				transform: translate(-50%, rem(5));
 			}
 		}
 		&._active {
 			span {
 				transform: scale(0);
 				&:first-child {
-					transform: rotate(-45deg);
+					transform: translateX(-50%) rotate(-45deg);
 					top: calc(50% - rem(1));
 				}
 				&:last-child {
-					transform: rotate(45deg);
+					transform: translateX(-50%) rotate(45deg);
 					bottom: calc(50% - rem(1));
 				}
 			}

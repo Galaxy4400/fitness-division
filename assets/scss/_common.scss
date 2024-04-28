@@ -226,9 +226,26 @@ body {
 // Основной блок
 .page {
 	min-width: 0;
+	padding: rem(143) 0px 0px 0px;
+	transition: all 0.3s ease 0s;
+	@media (max-width: em($md2)) {
+		padding: rem(80) 0px 0px 0px;
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(70) 0px 0px 0px;
+	}
+	&._scroll {
+		padding: rem(80) 0px 0px 0px;
+		@media (max-width: em($md4)) {
+			padding: rem(70) 0px 0px 0px;
+		}
+	}
 	// .page__section
 	&__section {
 		margin: 0px 0px rem(100) 0px;
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(70) 0px;
+		}
 	}
 
 	// .page__main-slider
@@ -239,21 +256,33 @@ body {
 	// .page__grid
 	&__grid {
 		margin: 0px 0px rem(80) 0px;
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(70) 0px;
+		}
 	}
 	
 	// .page__brands
 	&__brands {
 		margin: 0px 0px rem(80) 0px;
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(70) 0px;
+		}
 	}
 	
 	// .page__news
 	&__news {
 		margin: 0px 0px rem(80) 0px;
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(70) 0px;
+		}
 	}
 	
 	// .page__partners
 	&__partners {
 		margin: 0px 0px rem(90) 0px;
+		@media (max-width: em($md3)) {
+			margin: 0px 0px rem(70) 0px;
+		}
 	}
 
 }
