@@ -8076,7 +8076,7 @@ textarea.input {
 @media (min-width: 48em) {
   .main-grid-item_big {
     grid-row: span 2;
-    min-height: 45.25rem;
+    min-height: 37.5rem;
   }
 }
 @media (min-width: 48em) {

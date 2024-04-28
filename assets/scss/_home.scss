@@ -173,7 +173,7 @@
 	&_big {
 		@media (min-width: em($md3+1)) {
 			grid-row: span 2;
-			min-height: rem(724);
+			min-height: rem(600);
 		}
 
 		.main-grid-item__content {
