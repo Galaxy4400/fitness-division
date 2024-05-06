@@ -12,6 +12,8 @@
 	--color-background: #F6F6F6;
 	
 	--color-font: #222;
+	--color-font-light: #6A6A6A;
+	
 
 	--color-link: #2FB4C6;
 	--color-link-hover: #065863;
@@ -215,7 +217,7 @@ body {
 // Оболочка контента сайта. Необходимма, чтобы футер всегда был прижат к низу экрана
 .wrapper {
 	display: grid;
-	grid-template-rows: auto 1fr auto;
+	grid-template-rows: 1fr auto;
 	width: 100%;
 	min-height: 100%;
 	overflow: hidden;

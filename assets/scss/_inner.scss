@@ -1,0 +1,26 @@
+.page-inner {
+	margin: 0px 0px rem(80) 0px;
+	// .page-inner__content
+	&__content {
+	}
+}
+
+//===============================================================
+.inner-header {
+	padding: rem(25) 0px;
+	// .inner-header__container
+	&__container {
+	}
+	// .inner-header__body
+	&__body {
+		display: grid;
+		grid-gap: rem(20);
+	}
+	// .inner-header__title
+	&__title {
+	}
+}
+
+//===============================================================
+.inner-content {
+}

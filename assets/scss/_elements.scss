@@ -132,7 +132,7 @@
 		&:not(:last-child)::after {
 			content: '»';
 			margin: 0px rem(10);
-			color: #000;
+			color: var(--color-font-light);
 			font-weight: 500;
 		}
 	}
@@ -145,10 +145,13 @@
 		text-overflow: ellipsis;
 		color: inherit;
 		transition: all 0.3s ease 0s;
-		color: #000;
+		color: var(--color-font-light);
+		text-decoration-line: underline;
 		@media (any-hover: hover) {
 			&:hover {
 				color: var(--color-green);
+				text-decoration-line: underline;
+				color: var(--color-link-hover);
 			}
 		}
 	}
@@ -159,7 +162,7 @@
 		white-space: nowrap;
 		max-width: 250px;
 		text-overflow: ellipsis;
-		color: #000;
+		color: var(--color-font-light);
 	}
 }
 

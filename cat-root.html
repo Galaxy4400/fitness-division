@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Fitness Division</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__top header-top" data-adapt="menu__body,991">
+				<div class="header-top__container _container">
+					<div class="header-top__menu">
+						<nav class="top-menu" data-menu="top-menu">
+							<ul class="top-menu__list" data-menu-container="top-menu">
+								<li class="top-menu__item" data-menu-item>
+									<a class="top-menu__link" href="#">О компании</a>
+									<button class="top-menu__arrow _icon-arrow-down" type="button" data-menu-control></button>
+									<ul class="top-menu__sub-list" data-menu-submenu>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 1</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 2</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 3</a></li>
+									</ul>
+								</li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Сервис</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Дилерам</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__socials">
+						<div class="header-socials">
+							<a class="header-socials__social social _icon-wu" href="#"></a>
+							<a class="header-socials__social social _icon-vk" href="#"></a>
+							<a class="header-socials__social social _icon-tg" href="#"></a>
+						</div>
+					</div>
+					<div class="header-top__actions">
+						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
+						<button class="header-request" data-modal-opener="modal-request">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__container _container">
+					<div class="header-bottom__logo">
+						<a class="header-logo" href="#">
+							<img src="assets/img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="header-bottom__menu">
+						<div class="menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<figure class="menu__logo">
+									<img src="assets/img/logo.svg" alt="logo">
+								</figure>
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item>
+										<div class="menu__control">
+											<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+											<a class="menu__link" href="#">каталог оборудования</a>
+										</div>
+										<ul class="menu__sub-list" data-menu-submenu>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Свободные веса</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Функциональный тренинг</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Групповые программы</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Fitbench</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">бренды</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link _active" href="#">проекты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header-bottom__actions">
+						<form class="search _active" action="#" method="get" data-adapt="menu__body,767">
+							<input class="search__input input" type="text" name="s" placeholder="Поиск">
+							<button class="search__btn _icon-search" type="submit"></button>
+						</form>
+						<a class="header-cart btn _icon-cart" href="#" data-count="2"><span>Корзина</span></a>
+						<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<section class="page__inner page-inner">
+				<header class="page-inner__header inner-header">
+					<div class="inner-header__container _container">
+						<div class="inner-header__body">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Каталог оборудования">Каталог оборудования</span></li>
+								</ul>
+							</nav>
+							<h2 class="inner-header__title left-line">каталог оборудования</h2>
+						</div>
+					</div>
+				</header>
+
+				<div class="page-inner__content inner-content">
+					<div class="categories">
+						<div class="categories__container _container">
+							<div class="categories__body">
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/1.webp" alt="Кардиотренажеры">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">Кардиотренажеры</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">Беговые дорожки</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Эллиптические тренажеры</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Велотренажеры</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Степперы / Лестницы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Гребные тренажеры</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">CROSSFIT-серия</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Сайклы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Доп категория</a></li>
+										</ul>
+									</nav>
+								</article>
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/2.webp" alt="Силовые тренажеры">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">Силовые тренажеры</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">Грузоблочные тренажеры</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Тренажеры нагружаемые дисками</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Функциональные тренажеры</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Мульстанции</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Силовые рамы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Силовые скамьи</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Стойки для хранение</a></li>
+										</ul>
+									</nav>
+								</article>
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/3.webp" alt="Свободные веса">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">Свободные веса</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">Грифы и замки</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Диски для штанг</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Гантели и гири</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Платформы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Оборудование и аксессуары</a></li>
+										</ul>
+									</nav>
+								</article>
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/4.webp" alt="функциональный тренинг">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">функциональный тренинг</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">Функциональные станции</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Аксессуары для развития скорости</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Аксессуары для развития силы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Плиометрия</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Бокс</a></li>
+										</ul>
+									</nav>
+								</article>
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/5.webp" alt="Групповые программы">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">Групповые программы</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">Степ-платформы</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Коврики, маты</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Баланс-тренинг</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Pump Аэробика</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Гантели / Бодибары</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Эспандеры / Мячи</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Йога / Пилатес</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Системы хранения</a></li>
+										</ul>
+									</nav>
+								</article>
+								<article class="categories__card category-card">
+									<figure class="category-card__image _ibg">
+										<img src="assets/img/catalog/6.webp" alt="fitbench">
+									</figure>
+									<nav class="category-card__content">
+										<h3 class="category-card__title bottom-line">fitbench</h3>
+										<ul class="category-card__sub-categories">
+											<li class="category-card__item"><a class="category-card__link" href="#">FITBENCH ONE</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">FITBENCH STUDIO</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">FITBENCH PRO</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">FITBENCH FREE</a></li>
+											<li class="category-card__item"><a class="category-card__link" href="#">Аксессуары FITBENCH</a></li>
+										</ul>
+									</nav>
+								</article>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container _container">
+					<div class="footer-top__body">
+						<div class="footer-top__column footer-top__column_menu">
+							<nav class="footer-menu">
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link _icon-cat-menu" href="#">КАТАЛОГ оборудования</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КАРДИОТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СИЛОВЫЕ ТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ГРУППОВЫЕ ПРОГРАММЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">fitbench</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">БРЕНДЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ПРОЕКТЫ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">О КОМПАНИИ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СЕРВИС</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ДИЛЕРАМ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КОНТАКТЫ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-top__column footer-top__column_info">
+							<div class="footer-info">
+								<div class="footer-info__header">
+									<figure class="footer-info__logo">
+										<img src="assets/img/logo-white.svg" alt="logo">
+									</figure>
+									<div class="footer-info__socials">
+										<a class="social _icon-wu" href="#"></a>
+										<a class="social _icon-vk" href="#"></a>
+										<a class="social _icon-tg" href="#"></a>
+									</div>
+								</div>
+								<div class="footer-info__contacts">
+									<div class="footer-info__address">121467, Москва, ул. Истринская, 8</div>
+									<a class="footer-info__phone" href="tel:84957405100">8 (495) 740-51-00</a>
+									<button class="footer-info__request" data-modal-opener="modal-request">Заказать звонок</button>
+									<a class="footer-info__email" href="mailto:info@fitdivision.ru">info@fitdivision.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container _container">
+					<div class="footer-bottom__body">
+						<a class="footer-bottom__link" href="#">Cогласие на обработку персональных данных</a>
+						<a class="footer-bottom__link" href="#">Политика обработки персональных данных</a>
+						<a class="footer-bottom__link" href="#">Договор публичной оферты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+
+	
+	<div id="modal">
+	
+		<div class="modal-defaut" data-modal="modal-consult">
+			<p class="h2 left-line">Форма заказа консультации</p>
+		</div>
+		
+		<div class="modal-defaut" data-modal="modal-request">
+			<p class="h2 left-line">Форма заказа звонка</p>
+		</div>
+	
+	</div>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>
