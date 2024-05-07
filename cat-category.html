@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Fitness Division</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__top header-top" data-adapt="menu__body,991">
+				<div class="header-top__container _container">
+					<div class="header-top__menu">
+						<nav class="top-menu" data-menu="top-menu">
+							<ul class="top-menu__list" data-menu-container="top-menu">
+								<li class="top-menu__item" data-menu-item>
+									<a class="top-menu__link" href="#">О компании</a>
+									<button class="top-menu__arrow _icon-arrow-down" type="button" data-menu-control></button>
+									<ul class="top-menu__sub-list" data-menu-submenu>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 1</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 2</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 3</a></li>
+									</ul>
+								</li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Сервис</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Дилерам</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__socials">
+						<div class="header-socials">
+							<a class="header-socials__social social _icon-wu" href="#"></a>
+							<a class="header-socials__social social _icon-vk" href="#"></a>
+							<a class="header-socials__social social _icon-tg" href="#"></a>
+						</div>
+					</div>
+					<div class="header-top__actions">
+						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
+						<button class="header-request" data-modal-opener="modal-request">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__container _container">
+					<div class="header-bottom__logo">
+						<a class="header-logo" href="#">
+							<img src="assets/img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="header-bottom__menu">
+						<div class="menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<figure class="menu__logo">
+									<img src="assets/img/logo.svg" alt="logo">
+								</figure>
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item>
+										<div class="menu__control">
+											<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+											<a class="menu__link" href="#">каталог оборудования</a>
+										</div>
+										<ul class="menu__sub-list" data-menu-submenu>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Свободные веса</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Функциональный тренинг</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Групповые программы</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Fitbench</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">бренды</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link _active" href="#">проекты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header-bottom__actions">
+						<form class="search _active" action="#" method="get" data-adapt="menu__body,767">
+							<input class="search__input input" type="text" name="s" placeholder="Поиск">
+							<button class="search__btn _icon-search" type="submit"></button>
+						</form>
+						<a class="cart-btn cart-btn_header btn _icon-cart" href="#" data-count="2">Корзина</a>
+						<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<section class="page__inner page-inner">
+				<header class="page-inner__header inner-header">
+					<div class="inner-header__container _container">
+						<div class="inner-header__body">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Каталог">Каталог</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Профессиональные кардиотренажеры для фитнес-клубов">Профессиональные кардиотренажеры для фитнес-клубов</span></li>
+								</ul>
+							</nav>
+							<h2 class="inner-header__title left-line">Профессиональные кардиотренажеры для фитнес-клубов</h2>
+						</div>
+					</div>
+				</header>
+
+				<div class="page-inner__content inner-content">
+					<div class="rubricator">
+						<div class="rubricator__container _container">
+							<div class="rubricator__items">
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/1.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Беговые дорожки</h5>
+										<div class="rubricator-item__count">65 товаров</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/2.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Эллиптические тренажеры</h5>
+										<div class="rubricator-item__count">48 товаров</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/3.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Велотренажеры</h5>
+										<div class="rubricator-item__count">51 товар</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/4.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Степперы / Лестницы</h5>
+										<div class="rubricator-item__count">22 товара</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/5.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Гребные тренажеры</h5>
+										<div class="rubricator-item__count">14 товаров</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/6.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">CROSSFIT-серия</h5>
+										<div class="rubricator-item__count">9 товаров</div>
+									</div>
+								</a>
+								<a class="rubricator__item rubricator-item" href="#">
+									<figure class="rubricator-item__image _ibg">
+										<img src="assets/img/sub-cats/7.png" alt="rubricator">
+									</figure>
+									<div class="rubricator-item__content">
+										<h5 class="rubricator-item__title">Сайклы</h5>
+										<div class="rubricator-item__count">20 товаров</div>
+									</div>
+								</a>
+							</div>
+						</div>
+					</div>
+
+					<div class="catalog">
+						<div class="catalog__container _container">
+							<div class="catalog__body">
+								<aside class="catalog__aside catalog-aside">
+									<h4 class="catalog-aside__title">Каталог оборудования</h4>
+									<nav class="catalog-aside__menu cat-menu">
+										<ul class="cat-menu__list">
+											<li class="cat-menu__item">
+												<a class="cat-menu-item _active" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/1.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Кардиотренажеры</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+											<li class="cat-menu__item">
+												<a class="cat-menu-item" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/2.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Силовые тренажеры</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+											<li class="cat-menu__item">
+												<a class="cat-menu-item" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/3.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Свободные веса</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+											<li class="cat-menu__item">
+												<a class="cat-menu-item" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/4.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Функциональный тренинг</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+											<li class="cat-menu__item">
+												<a class="cat-menu-item" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/5.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Групповые программы</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+											<li class="cat-menu__item">
+												<a class="cat-menu-item" href="#">
+													<figure class="cat-menu-item__image _ibg">
+														<img src="assets/img/catalog/6.webp" alt="catalog">
+													</figure>
+													<h4 class="cat-menu-item__title">Fitbench</h4>
+													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</aside>
+								<div class="catalog__main">
+									<div class="catalog__filters filters">
+										<div class="filters__section filters__section_left">
+											<div class="filters__item">
+												<span class="_icon-filter"></span>
+											</div>
+											<div class="filters__item">
+												<div class="filter">
+													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_1">Цена</button>
+													<ul class="filter__variants filter__variants_1">
+														<li class="filter__variant">Вариант 1</li>
+														<li class="filter__variant">Вариант 2</li>
+														<li class="filter__variant">Вариант 3</li>
+													</ul>
+												</div>
+											</div>
+											<div class="filters__item">
+												<div class="filter">
+													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_2">Бренд</button>
+													<ul class="filter__variants filter__variants_2">
+														<li class="filter__variant">Вариант 1</li>
+														<li class="filter__variant">Вариант 2</li>
+														<li class="filter__variant">Вариант 3</li>
+													</ul>
+												</div>
+											</div>
+											<div class="filters__item">
+												<div class="filter">
+													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_3">Серия</button>
+													<ul class="filter__variants filter__variants_3">
+														<li class="filter__variant">Вариант 1</li>
+														<li class="filter__variant">Вариант 2</li>
+														<li class="filter__variant">Вариант 3</li>
+													</ul>
+												</div>
+											</div>
+											<div class="filters__item">
+												<button class="filters__btn" type="button">Отчистить фильтр</button>
+											</div>
+										</div>
+										<div class="filters__section filters__section_right">
+											<div class="filters__item">
+												<div class="filter">
+													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_4">Сортировка</button>
+													<ul class="filter__variants filter__variants_4">
+														<li class="filter__variant">Вариант 1</li>
+														<li class="filter__variant">Вариант 2</li>
+														<li class="filter__variant">Вариант 3</li>
+													</ul>
+												</div>
+											</div>
+											<div class="filters__item">
+												<div class="filters__show-types show-types">
+													<a class="show-types__link _icon-to-grid _active" href="#"></a>
+													<a class="show-types__link _icon-to-line" href="#"></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog__cards cards">
+										<div class="cards__item card">
+											<div class="card__main">
+												<div class="card__tags">
+													<div class="tag tag_new">Новинка</div>
+													<div class="tag tag_hot">Хит</div>
+													<div class="tag tag_sale">-30%</div>
+												</div>
+												<div class="card__action">
+													<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+												</div>
+												<a class="card__image _ibg" href="#">
+													<img src="assets/img/products/1.jpg" alt="product">
+												</a>
+											</div>
+											<div class="card__content">
+												<div class="card__info">
+													<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+													<div class="card__code">арт. TCS650-blck</div>
+												</div>
+												<div class="card__prices">
+													<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+													<div class="card__price price price_old" data-cur="₽">990 800</div>
+												</div>
+											</div>
+										</div>
+										<div class="cards__item card">
+											<div class="card__main">
+												<div class="card__tags">
+													<div class="tag tag_new">Новинка</div>
+												</div>
+												<div class="card__action">
+													<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+												</div>
+												<a class="card__image _ibg" href="#">
+													<img src="assets/img/products/2.jpg" alt="product">
+												</a>
+											</div>
+											<div class="card__content">
+												<div class="card__info">
+													<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+													<div class="card__code">арт. TCS650-blck</div>
+												</div>
+												<div class="card__prices">
+													<!-- <div class="card__price price" data-cur="₽">1 213 800</div> -->
+												</div>
+											</div>
+										</div>
+										<div class="cards__item card">
+											<div class="card__main">
+												<div class="card__tags">
+													<div class="tag tag_sale">-30%</div>
+												</div>
+												<div class="card__action">
+													<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+												</div>
+												<a class="card__image _ibg" href="#">
+													<img src="assets/img/products/3.jpg" alt="product">
+												</a>
+											</div>
+											<div class="card__content">
+												<div class="card__info">
+													<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+													<div class="card__code">арт. TCS650-blck</div>
+												</div>
+												<div class="card__prices">
+													<!-- <div class="card__price price" data-cur="₽">1 213 800</div> -->
+												</div>
+											</div>
+										</div>
+										<div class="cards__item card">
+											<div class="card__main">
+												<div class="card__tags">
+												</div>
+												<div class="card__action">
+													<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+												</div>
+												<a class="card__image _ibg" href="#">
+													<img src="assets/img/products/4.jpg" alt="product">
+												</a>
+											</div>
+											<div class="card__content">
+												<div class="card__info">
+													<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+													<div class="card__code">арт. TCS650-blck</div>
+												</div>
+												<div class="card__prices">
+													<!-- <div class="card__price price" data-cur="₽">1 213 800</div> -->
+												</div>
+											</div>
+										</div>
+										<div class="cards__item card">
+											<div class="card__main">
+												<div class="card__tags">
+													<div class="tag tag_new">Новинка</div>
+													<div class="tag tag_sale">-30%</div>
+												</div>
+												<div class="card__action">
+													<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+												</div>
+												<a class="card__image _ibg" href="#">
+													<img src="assets/img/products/5.jpg" alt="product">
+												</a>
+											</div>
+											<div class="card__content">
+												<div class="card__info">
+													<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+													<div class="card__code">арт. TCS650-blck</div>
+												</div>
+												<div class="card__prices">
+													<!-- <div class="card__price price" data-cur="₽">1 213 800</div> -->
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="catalog__footer">
+										<a class="catalog__more" href="#">Посмотреть ещё</a>
+										<div class="catalog__pagging pagging">
+											<a class="pagging__link pagging__link_arrow-prev _icon-arrow-pagging" href="#"></a>
+											<ul class="pagging__list">
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">1</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">...</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">3</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link _active" href="#">4</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">5</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">...</a>
+												</li>
+												<li class="pagging__item">
+													<a class="pagging__link" href="#">10</a>
+												</li>
+											</ul>
+											<a class="pagging__link pagging__link_arrow-next _icon-arrow-pagging" href="#"></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container _container">
+					<div class="footer-top__body">
+						<div class="footer-top__column footer-top__column_menu">
+							<nav class="footer-menu">
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link _icon-cat-menu" href="#">КАТАЛОГ оборудования</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КАРДИОТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СИЛОВЫЕ ТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ГРУППОВЫЕ ПРОГРАММЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">fitbench</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">БРЕНДЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ПРОЕКТЫ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">О КОМПАНИИ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СЕРВИС</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ДИЛЕРАМ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КОНТАКТЫ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-top__column footer-top__column_info">
+							<div class="footer-info">
+								<div class="footer-info__header">
+									<figure class="footer-info__logo">
+										<img src="assets/img/logo-white.svg" alt="logo">
+									</figure>
+									<div class="footer-info__socials">
+										<a class="social _icon-wu" href="#"></a>
+										<a class="social _icon-vk" href="#"></a>
+										<a class="social _icon-tg" href="#"></a>
+									</div>
+								</div>
+								<div class="footer-info__contacts">
+									<div class="footer-info__address">121467, Москва, ул. Истринская, 8</div>
+									<a class="footer-info__phone" href="tel:84957405100">8 (495) 740-51-00</a>
+									<button class="footer-info__request" data-modal-opener="modal-request">Заказать звонок</button>
+									<a class="footer-info__email" href="mailto:info@fitdivision.ru">info@fitdivision.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container _container">
+					<div class="footer-bottom__body">
+						<a class="footer-bottom__link" href="#">Cогласие на обработку персональных данных</a>
+						<a class="footer-bottom__link" href="#">Политика обработки персональных данных</a>
+						<a class="footer-bottom__link" href="#">Договор публичной оферты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+
+	
+	<div id="modal">
+	
+		<div class="modal-defaut" data-modal="modal-consult">
+			<p class="h2 left-line">Форма заказа консультации</p>
+		</div>
+		
+		<div class="modal-defaut" data-modal="modal-request">
+			<p class="h2 left-line">Форма заказа звонка</p>
+		</div>
+	
+	</div>
+	
+
+	<!-- services -->
+	<script src="https://www.google.com/recaptcha/api.js?render=<reCAPTCHA_site_key>&badge=bottomleft"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<ваш API-ключ>"></script>
+	
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>

@@ -130,7 +130,7 @@
 		display: flex;
 		align-items: center;
 		&:not(:last-child)::after {
-			content: '»';
+			content: '/';
 			margin: 0px rem(10);
 			color: var(--color-font-light);
 			font-weight: 500;
@@ -141,7 +141,7 @@
 		display: inline-block;
 		overflow: hidden;
 		white-space: nowrap;
-		max-width: 250px;
+		max-width: 500px;
 		text-overflow: ellipsis;
 		color: inherit;
 		transition: all 0.3s ease 0s;
@@ -160,7 +160,7 @@
 		display: inline-block;
 		overflow: hidden;
 		white-space: nowrap;
-		max-width: 250px;
+		max-width: 500px;
 		text-overflow: ellipsis;
 		color: var(--color-font-light);
 	}
@@ -171,15 +171,13 @@
  * Стили пагинации
  */
 .pagging {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	
 	// .pagging__arrow
 	&__arrow {
 	}
 	// .pagging__list
 	&__list {
-		display: flex;
+		
 	}
 	// .pagging__item
 	&__item {
@@ -191,6 +189,58 @@
 	}
 }
 
+.pagging {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: rem(7);
+	// .pagging__list
+	&__list {
+		display: flex;
+		gap: rem(7);
+	}
+	// .pagging__item
+	&__item {
+	}
+	// .pagging__link
+	&__link {
+		padding: rem(3);
+		width: rem(30);
+		height: rem(30);
+		border: rem(1) solid var(--color-font-light);
+		color: var(--color-font-light);
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		font-weight: 400;
+		font-size: rem(14);
+		&._active {
+			border: rem(1) solid var(--color-main);
+			background: var(--color-main);
+			color: #fff;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: rem(1) solid var(--color-main);
+				background: var(--color-main);
+				color: #fff;
+			}
+		}
+		// .pagging__link_arrow-prev
+		&_arrow-prev {
+			width: rem(38);
+			font-size: rem(11);
+			line-height: 0;
+			transform: scale(-1, 1);
+		}
+		// .pagging__link_arrow-next
+		&_arrow-next {
+			width: rem(38);
+			font-size: rem(11);
+			line-height: 0;
+		}
+	}
+}
 
 /**
  * Стили иконки возврата к началу страницы
@@ -282,5 +332,38 @@
 		height: 100%;
 		width: rem(5);
 		background: var(--color-main);
+	}
+}
+
+//===============================================================
+.cart-btn {
+	display: flex;
+	align-items: center;
+	gap: rem(8);
+	font-size: rem(14);
+	font-weight: 700;
+	@media (max-width: em(1300)) {
+		span {
+			display: none;
+		}
+	}
+	&::before {
+		font-size: rem(20);
+	}
+	// .cart-btn_header
+	&_header {
+		&::after {
+			content: attr(data-count);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			font-size: rem(10);
+			width: 16px;
+			height: 16px;
+			background: #fff;
+			color: var(--color-main);
+			border-radius: 50%;
+			padding: rem(1) 0px 0px 0px;
+		}
 	}
 }

@@ -434,31 +434,3 @@
 	}
 }
 
-.header-cart {
-	display: flex;
-	align-items: center;
-	gap: rem(8);
-	font-size: rem(14);
-	font-weight: 700;
-	@media (max-width: em(1300)) {
-		span {
-			display: none;
-		}
-	}
-	&::before {
-		font-size: rem(20);
-	}
-	&::after {
-		content: attr(data-count);
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		font-size: rem(10);
-		width: 16px;
-		height: 16px;
-		background: #fff;
-		color: var(--color-main);
-		border-radius: 50%;
-		padding: rem(1) 0px 0px 0px;
-	}
-}

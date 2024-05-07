@@ -10,13 +10,15 @@
 
 	--color-body-background: #FFFFFF;
 	--color-background: #F6F6F6;
+
+	--color-border: #ECECEC;
 	
 	--color-font: #222;
 	--color-font-light: #6A6A6A;
 	
 
 	--color-link: #2FB4C6;
-	--color-link-hover: #065863;
+	--color-link-hover: #0b606c;
 
 	--color-titles: #222;
 }
@@ -55,6 +57,7 @@ body {
 	background: var(--color-body-background);
 	font-size: rem(16);
 	line-height: 137%;
+	font-weight: 500;
 	&._lock {
 		overflow: hidden;
 	}
@@ -107,15 +110,19 @@ body {
 	h4 a,
 	h4 {
 		font-size: rem(16);
-		line-height: 137%;
+		line-height: 137.5%;
 		color: var(--color-titles);
+		font-weight: 500;
+		font-style: normal;
 	}
 	.h5,
 	h5 a,
 	h5 {
-		font-size: rem(19);
-		line-height: prc(21, 19);
+		font-size: rem(16);
+		line-height: 137.5%;
 		color: var(--color-titles);
+		font-weight: 500;
+		font-style: normal;
 	}
 
 	
