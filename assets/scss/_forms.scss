@@ -219,19 +219,18 @@ textarea.input {
 			&::before {
 				content: '';
 				position: absolute;
-				top: em(-2);
+				top: em(-1);
 				left: em(-30);
 				width: em(20);
 				height: em(20);
 				background: #ffffff;
-				border: rem(1) solid #cccccc;
-				border-radius: rem(4);
+				border: rem(1) solid #939393;
 				transition: all 0.3s ease 0s;
 			}
 			&::after {
 				content: '';
 				position: absolute;
-				top: em(0);
+				top: em(1);
 				left: em(-23);
 				width: em(7);
 				height: em(12);
@@ -356,15 +355,13 @@ textarea.input {
  */
 .quantity {
 	display: inline-flex;
-	width: em(88);
-	height: em(43);
-	border: rem(1) solid #cccccc;
-	border-radius: rem(4);
+	width: em(118);
+	height: em(50);
+	border: rem(1) solid #ECECEC;
 	// .quantity__button
 	&__button {
 		background: #ffffff;
-		border-radius: rem(4);
-		flex: 0 0 em(30);
+		flex: 0 0 em(35);
 		position: relative;
 		cursor: pointer;
 		.quantity._readonly & {
@@ -378,9 +375,9 @@ textarea.input {
 			left: 50%;
 			transition: all 0.3s ease 0s;
 			margin: 0px 0px 0px em(-4.5);
-			background-color: #888888;
-			width: em(9);
-			height: 1px;
+			background-color: #6A6A6A;
+			width: em(13);
+			height: rem(1);
 		}
 		@media (min-width: ($md2+1+'px')) {
 			&:hover {
@@ -404,8 +401,9 @@ textarea.input {
 	&__input {
 		flex: 1 1 auto;
 		input {
+			font-size: rem(18);
 			height: 100%;
-			color: #888888;
+			color: var(--color-font);
 			width: 100%;
 			text-align: center;
 			appearance: 'textfield';

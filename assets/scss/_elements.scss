@@ -167,28 +167,6 @@
 }
 
 
-/**
- * Стили пагинации
- */
-.pagging {
-	
-	// .pagging__arrow
-	&__arrow {
-	}
-	// .pagging__list
-	&__list {
-		
-	}
-	// .pagging__item
-	&__item {
-	}
-	// .pagging__link
-	&__link {
-		&._active {
-		}
-	}
-}
-
 .pagging {
 	display: flex;
 	align-items: center;
@@ -226,18 +204,32 @@
 				color: #fff;
 			}
 		}
+		@media (max-width: em($md4)) {
+			padding: rem(2);
+			width: rem(25);
+			height: rem(25);
+			font-size: rem(12);
+		}
 		// .pagging__link_arrow-prev
 		&_arrow-prev {
 			width: rem(38);
 			font-size: rem(11);
 			line-height: 0;
 			transform: scale(-1, 1);
+			@media (max-width: em($md4)) {
+				width: rem(30);
+				font-size: rem(10);
+			}
 		}
 		// .pagging__link_arrow-next
 		&_arrow-next {
 			width: rem(38);
 			font-size: rem(11);
 			line-height: 0;
+			@media (max-width: em($md4)) {
+				width: rem(30);
+				font-size: rem(10);
+			}
 		}
 	}
 }
@@ -342,6 +334,7 @@
 	gap: rem(8);
 	font-size: rem(14);
 	font-weight: 700;
+	white-space: nowrap;
 	@media (max-width: em(1300)) {
 		span {
 			display: none;
@@ -350,10 +343,10 @@
 	&::before {
 		font-size: rem(20);
 	}
-	// .cart-btn_header
-	&_header {
+	// .cart-btn_counter
+	&_counter {
 		&::after {
-			content: attr(data-count);
+			content: attr(data-qty);
 			display: flex;
 			justify-content: center;
 			align-items: center;
