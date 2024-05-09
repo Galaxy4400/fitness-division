@@ -186,7 +186,9 @@
 					</div>
 
 					<div class="catalog">
-						<div class="catalog__menu-btn" data-menu-icon="cat-menu">Каталог</div>
+						<button class="catalog__menu-btn" type="button" data-menu-icon="cat-menu">Каталог</button>
+						<button class="catalog__filter-btn" type="button" data-menu-icon="filters-menu">Фильтр</button>
+
 						<div class="catalog__container _container">
 							<div class="catalog__body">
 								<aside class="catalog__aside catalog-aside" data-menu="cat-menu" data-menu-container="cat-menu">
@@ -252,58 +254,58 @@
 									</nav>
 								</aside>
 								<div class="catalog__main">
-									<div class="catalog__filters filters">
+									<div class="catalog__filters filters" data-menu="filters-menu" data-menu-container="filters-menu">
+										<button class="filters__close _icon-close" type="button" data-menu-close></button>
+										<h4 class="filters__title">Фильтр</h4>
 										<div class="filters__section filters__section_left">
-											<div class="filters__item">
+											<div class="filters__item filters__item_icons">
 												<span class="_icon-filter"></span>
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_1">Цена</button>
-													<ul class="filter__variants filter__variants_1">
-														<li class="filter__variant">Вариант 1</li>
-														<li class="filter__variant">Вариант 2</li>
-														<li class="filter__variant">Вариант 3</li>
-													</ul>
+													<select name="form[]" data-choice>
+														<option value="0" selected disabled>Цена</option>
+														<option value="1">Цена (по возрастанию)</option>
+														<option value="2">Цена (по убыванию)</option>
+													</select>
 												</div>
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_2">Бренд</button>
-													<ul class="filter__variants filter__variants_2">
-														<li class="filter__variant">Вариант 1</li>
-														<li class="filter__variant">Вариант 2</li>
-														<li class="filter__variant">Вариант 3</li>
-													</ul>
+													<select name="form[]" data-choice>
+														<option value="0" selected disabled>Бренд</option>
+														<option value="1">Какой-то бренд</option>
+														<option value="2">Ещё один</option>
+														<option value="3">И ещё один</option>
+													</select>
 												</div>
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_3">Серия</button>
-													<ul class="filter__variants filter__variants_3">
-														<li class="filter__variant">Вариант 1</li>
-														<li class="filter__variant">Вариант 2</li>
-														<li class="filter__variant">Вариант 3</li>
-													</ul>
+													<select name="form[]" data-choice>
+														<option value="0" selected disabled>Серия</option>
+														<option value="1">Какая-то серия</option>
+														<option value="2">Ещё одна</option>
+														<option value="3">И ещё одина</option>
+													</select>
 												</div>
 											</div>
-											<div class="filters__item">
+											<div class="filters__item" data-adapt="filters__section_right,1200">
 												<button class="filters__btn" type="button">Отчистить фильтр</button>
 											</div>
 										</div>
 										<div class="filters__section filters__section_right">
 											<div class="filters__item">
 												<div class="filter">
-													<button class="filter__button _icon-arrow-down" type="button" data-link="filter__variants_4">Сортировка</button>
-													<ul class="filter__variants filter__variants_4">
-														<li class="filter__variant">Вариант 1</li>
-														<li class="filter__variant">Вариант 2</li>
-														<li class="filter__variant">Вариант 3</li>
-													</ul>
+													<select name="form[]" data-choice>
+														<option value="0" selected disabled>Популярность</option>
+														<option value="1">Популярность (по возрастанию)</option>
+														<option value="2">Популярность (по убыванию)</option>
+													</select>
 												</div>
 											</div>
 											<div class="filters__item">
-												<div class="filters__show-types show-types">
+												<div class="filters__show-types show-types" data-adapt="filters__item_icons,1200">
 													<a class="show-types__link _icon-to-grid _active" href="#"></a>
 													<a class="show-types__link _icon-to-line" href="#"></a>
 												</div>

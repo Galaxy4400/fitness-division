@@ -11,5 +11,7 @@ new Menu('main-menu');
 new Menu('top-menu');
 
 // Инициализация меню каталога
-
 new Menu('cat-menu');
+
+// Инициализация меню фильтров
+new Menu('filters-menu');
