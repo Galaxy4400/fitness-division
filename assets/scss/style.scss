@@ -56,5 +56,6 @@ $fontFamily: "Montserrat";
 @import "inner";
 
 // Подключение любых других дополнительных стилей
-// @import "news";
 @import "catalog";
+@import "product";
+// @import "news";

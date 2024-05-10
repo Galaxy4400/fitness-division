@@ -28,6 +28,7 @@
 	}
 	// .category-card__image
 	&__image {
+		display: block;
 		height: rem(270);
 		margin: 0px 0px rem(18) 0px;
 		img {
@@ -39,7 +40,6 @@
 	}
 	// .category-card__title
 	&__title {
-		@include adaptiv-value(font-size, 26, 22, 1);
 		margin: 0px 0px rem(43) 0px;
 	}
 	// .category-card__sub-categories

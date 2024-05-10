@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Fitness Division</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__top header-top" data-adapt="menu__body,991">
+				<div class="header-top__container _container">
+					<div class="header-top__menu">
+						<nav class="top-menu" data-menu="top-menu">
+							<ul class="top-menu__list" data-menu-container="top-menu">
+								<li class="top-menu__item" data-menu-item>
+									<a class="top-menu__link" href="#">О компании</a>
+									<button class="top-menu__arrow _icon-arrow-down" type="button" data-menu-control></button>
+									<ul class="top-menu__sub-list" data-menu-submenu>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 1</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 2</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Sub Link 3</a></li>
+									</ul>
+								</li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Сервис</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Дилерам</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__socials">
+						<div class="header-socials">
+							<a class="header-socials__social social _icon-wu" href="#"></a>
+							<a class="header-socials__social social _icon-vk" href="#"></a>
+							<a class="header-socials__social social _icon-tg" href="#"></a>
+						</div>
+					</div>
+					<div class="header-top__actions">
+						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
+						<button class="header-request" data-modal-opener="modal-request">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__container _container">
+					<div class="header-bottom__logo">
+						<a class="header-logo" href="#">
+							<img src="assets/img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="header-bottom__menu">
+						<div class="menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<figure class="menu__logo">
+									<img src="assets/img/logo.svg" alt="logo">
+								</figure>
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item>
+										<div class="menu__control">
+											<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+											<a class="menu__link" href="#">каталог оборудования</a>
+										</div>
+										<ul class="menu__sub-list" data-menu-submenu>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Свободные веса</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Функциональный тренинг</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Групповые программы</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Fitbench</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">бренды</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link _active" href="#">проекты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header-bottom__actions">
+						<form class="search _active" action="#" method="get" data-adapt="menu__body,767">
+							<input class="search__input input" type="text" name="s" placeholder="Поиск">
+							<button class="search__btn _icon-search" type="submit"></button>
+						</form>
+						<a class="cart-btn cart-btn_counter btn _icon-cart" href="#" data-qty="2"><span>Корзина</span></a>
+						<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<section class="page__inner page-inner">
+
+				<header class="page-inner__header inner-header">
+					<div class="inner-header__container _container">
+						<div class="inner-header__body">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Каталог">Каталог</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Профессиональные кардиотренажеры для фитнес-клубов">Профессиональные кардиотренажеры для фитнес-клубов</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Беговая дорожка True TCS650">Беговая дорожка True TCS650</span></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</header>
+
+				<div class="page-inner__content inner-content">
+					<div class="product">
+						<div class="product__container _container">
+
+							<div class="product__details product-details">
+
+								<div class="product-details__column product-details__column_gallery">
+									<div class="product-details__gallery product-details__gallery_small">
+										<div class="product-gallery-small" data-swiper>
+											<div class="product-gallery-small__slides">
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/2.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/3.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/4.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-small__slide product-gallery-small-slide">
+													<figure class="product-gallery-small-slide__image">
+														<img src="assets/img/products/2.jpg" alt="details">
+													</figure>
+												</div>
+											</div>
+											<div class="product-gallery-small__arrows">
+												<div class="product-gallery-small__arrow product-gallery-small__arrow_prev _icon-arrow-slide"></div>
+												<div class="product-gallery-small__arrow product-gallery-small__arrow_next _icon-arrow-slide"></div>
+											</div>
+										</div>
+									</div>
+
+									<div class="product-details__gallery product-details__gallery_big">
+										<div class="product-details__tags">
+											<div class="tag tag_new">Новинка</div>
+											<div class="tag tag_hot">Хит</div>
+										</div>
+										<div class="product-gallery-big" data-swiper>
+											<div class="product-gallery-big__slides">
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+												<div class="product-gallery-big__slide product-gallery-big-slide">
+													<figure class="product-gallery-big-slide__image">
+														<img src="assets/img/details/1.jpg" alt="details">
+													</figure>
+												</div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+
+								<div class="product-details__column product-details__column_info">
+									<header class="product-details__header">
+										<h2 class="product-details__title left-line">Беговая дорожка True TCS650</h2>
+										<div class="product-details__code">арт. TCS650-blck</div>
+									</header>
+									<div class="product-details__main">
+										<div class="product-details__actions">
+											<div class="product-details__prices">
+												<div class="product-details__price price price_new" data-cur="₽">990 800</div>
+												<div class="product-details__price price price_old" data-cur="₽">1 213 800</div>
+											</div>
+											<button class="product-details__btn cart-btn btn _icon-cart" type="button">Добавить в корзину</button>
+											<input type="number" name="qty" value="1" data-qty min="1" max="100">
+										</div>
+										<div class="product-details__desc">
+											Воплощение философии TRUE о  надежности как ключевой характеристике тренажеров класса premium. 650  Treadmill создана чтобы работать долго и с любыми нагрузками. Оснащенная  самоохлаждающимся двигателем мощностью 5 л.с. Max Drive и механизмами,  подобранными с высокой точностью, она служит образцом производительности  и эффективности. Но на этом достоинства 650 не заканчиваются. Эта  беговая дорожка заряжена передовыми технологическими опциями, такими как  система контроля пульса HRC Heart Rate Control® и система амортизации  Soft System®, чтобы обеспечить занимающимся поистине первоклассную  кардиотренировку.
+										</div>
+										<ul class="product-details__properties">
+											<li class="product-details__property">— Максимальный вес пользователя до 227 кг</li>
+											<li class="product-details__property">— Скорость до 19 км/ч, наклон до 15%</li>
+											<li class="product-details__property">— Гарантия 3 года на беговое полотно</li>
+											<li class="product-details__property">— Новейший дизайн Black Line</li>
+										</ul>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="product__info">
+								<div class="product-info" data-spoiler="product-info">
+									<div class="product-info__item" data-spoiler-item>
+										<button class="product-info__control h4" type="button" data-spoiler-control>Технические характеристики<span class="product-info__icon"></span></button>
+										<div class="product-info__container" data-spoiler-container>
+											<div class="product-info__content">
+												<dl class="product-info__list product-info-list">
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Основной двигатель</dt>
+														<dd class="product-info-list__value">TRUE AC Max Drive, самоохлаждающийся</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Мощность рабочая</dt>
+														<dd class="product-info-list__value">5 л.с.</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Двигатель наклона, осевая нагрузка до</dt>
+														<dd class="product-info-list__value">545 кг</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Датчик скорости</dt>
+														<dd class="product-info-list__value">Оптический</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Конструкция деки</dt>
+														<dd class="product-info-list__value">2х сторонняя ламинированная ДВП средней жесткости</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Толщина деки</dt>
+														<dd class="product-info-list__value">2.54 см</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Возможность перевернуть деку</dt>
+														<dd class="product-info-list__value">Стандартно</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Беговое полотно</dt>
+														<dd class="product-info-list__value">Siegling, многослойное с ПВХ покрытием, пропитанное смазкой</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Ролики натяжения полотна, диаметр</dt>
+														<dd class="product-info-list__value">Ролики диаметр 8 см с защищенными подшипниками</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Система амортизации</dt>
+														<dd class="product-info-list__value">Запатентованная TRUE Soft System®</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Смазка</dt>
+														<dd class="product-info-list__value">Собственная запатентованная смазка TRUE “Silex”</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Диапазон скорости</dt>
+														<dd class="product-info-list__value">0.8-19 км/ч</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Диапазон углов наклона</dt>
+														<dd class="product-info-list__value">0%-15%</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Конструкция рамы</dt>
+														<dd class="product-info-list__value">Высокопрочная сталь, роботизированная сварка</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Передача частоты сердечных сокращений с помощью Bluetooth</dt>
+														<dd class="product-info-list__value">Доступно для консолей Envision</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Датчики пульса на рукоятках</dt>
+														<dd class="product-info-list__value">Стандартно</dd>
+													</div>
+													<div class="product-info-list__item">
+														<dt class="product-info-list__property">Беспроводной датчик пульса, совместимость</dt>
+														<dd class="product-info-list__value">Polar®</dd>
+													</div>
+												</dl>
+											</div>
+										</div>
+									</div>
+									<div class="product-info__item" data-spoiler-item>
+										<button class="product-info__control h4" type="button" data-spoiler-control>Физические характеристики<span class="product-info__icon"></span></button>
+										<div class="product-info__container" data-spoiler-container>
+											<div class="product-info__content">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?
+											</div>
+										</div>
+									</div>
+									<div class="product-info__item" data-spoiler-item>
+										<button class="product-info__control h4" type="button" data-spoiler-control>Гарантия<span class="product-info__icon"></span></button>
+										<div class="product-info__container" data-spoiler-container>
+											<div class="product-info__content">
+												Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores, doloremque?
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="quote">
+						<div class="quote__container _container">
+							<div class="quote__body">
+								<figure class="quote__image">
+									<img src="assets/img/persone.png" alt="perosne">
+								</figure>
+								<div class="quote__content">
+									<header class="quote__header">
+										<h4 class="quote__title">Антошин Никита</h4>
+										<div class="quote__position">Менеджер по работе с ключевыми клиентами</div>
+									</header>
+									<div class="quote__text">Отправьте на <a href="mailto:info@fitdivision.ru">info@fitdivision.ru</a> список необходимого оборудования для  вашего проекта, и я подготовлю для вас индивидуальное предложение по  схеме: «цена + скидка + условия». Гибкая система ценообразования позволяет предложить выгодные условия для проектов с любым бюджетом.</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="seealso">
+						<div class="seealso__container _container">
+							<div class="seealso__body">
+								<h2 class="seealso__title left-line">Рекомендуем посмотреть</h2>
+								<div class="seealso__slider">
+									<div class="seealso-slider" data-swiper>
+										<div class="seealso-slider__slides">
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="seealso-slider__slide">
+												<div class="card">
+													<div class="card__main">
+														<div class="card__tags">
+															<div class="tag tag_new">Новинка</div>
+															<div class="tag tag_hot">Хит</div>
+															<div class="tag tag_sale">-30%</div>
+														</div>
+														<div class="card__action">
+															<button class="card__btn cart-btn btn _icon-cart" type="button">В корзину</button>
+														</div>
+														<a class="card__image _ibg" href="#">
+															<img src="assets/img/products/1.jpg" alt="product">
+														</a>
+													</div>
+													<div class="card__content">
+														<div class="card__info">
+															<h4 class="card__title"><a href="#">Беговая дорожка True TCS650</a></h4>
+															<div class="card__code">арт. TCS650-blck</div>
+														</div>
+														<div class="card__prices">
+															<div class="card__price price price_new" data-cur="₽">1 213 800</div>
+															<div class="card__price price price_old" data-cur="₽">990 800</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="seealso__arrows">
+										<div class="seealso__arrow seealso__arrow_prev _icon-arrow-slide"></div>
+										<div class="seealso__arrow seealso__arrow_next _icon-arrow-slide"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+			</section>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container _container">
+					<div class="footer-top__body">
+						<div class="footer-top__column footer-top__column_menu">
+							<nav class="footer-menu">
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link _icon-cat-menu" href="#">КАТАЛОГ оборудования</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КАРДИОТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СИЛОВЫЕ ТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ГРУППОВЫЕ ПРОГРАММЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">fitbench</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">БРЕНДЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ПРОЕКТЫ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">О КОМПАНИИ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СЕРВИС</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ДИЛЕРАМ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КОНТАКТЫ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-top__column footer-top__column_info">
+							<div class="footer-info">
+								<div class="footer-info__header">
+									<figure class="footer-info__logo">
+										<img src="assets/img/logo-white.svg" alt="logo">
+									</figure>
+									<div class="footer-info__socials">
+										<a class="social _icon-wu" href="#"></a>
+										<a class="social _icon-vk" href="#"></a>
+										<a class="social _icon-tg" href="#"></a>
+									</div>
+								</div>
+								<div class="footer-info__contacts">
+									<div class="footer-info__address">121467, Москва, ул. Истринская, 8</div>
+									<a class="footer-info__phone" href="tel:84957405100">8 (495) 740-51-00</a>
+									<button class="footer-info__request" data-modal-opener="modal-request">Заказать звонок</button>
+									<a class="footer-info__email" href="mailto:info@fitdivision.ru">info@fitdivision.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container _container">
+					<div class="footer-bottom__body">
+						<a class="footer-bottom__link" href="#">Cогласие на обработку персональных данных</a>
+						<a class="footer-bottom__link" href="#">Политика обработки персональных данных</a>
+						<a class="footer-bottom__link" href="#">Договор публичной оферты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+
+	
+	<div id="modal">
+	
+		<div class="modal-defaut" data-modal="modal-consult">
+			<p class="h2 left-line">Форма заказа консультации</p>
+		</div>
+		
+		<div class="modal-defaut" data-modal="modal-request">
+			<p class="h2 left-line">Форма заказа звонка</p>
+		</div>
+	
+	</div>
+	
+
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>
