@@ -35,7 +35,6 @@ $fontFamily: "Montserrat";
 @import "nouislider";
 @import "datepicker";
 @import "lightgallery";
-@import "aos";
 
 // Технические классы
 @import "technical";
@@ -58,4 +57,5 @@ $fontFamily: "Montserrat";
 // Подключение любых других дополнительных стилей
 @import "catalog";
 @import "product";
+@import "projects";
 // @import "news";

@@ -131,8 +131,17 @@ body {
 	//---------------------------------------------------------------
 	._special-styles {
 
-		h1, h2, h3, h4, h5, h6 {
-			margin: 0px 0px rem(20) 0px;
+		h1 {
+			margin: 0px 0px em(30, 44) 0px;
+		}
+		h2 {
+			margin: 0px 0px em(30, 34) 0px;
+		}
+		h3 {
+			margin: 0px 0px em(30, 26) 0px;
+		}
+		h4, h5, h6 {
+			margin: 0px 0px rem(15) 0px;
 		}
 
 		a {
@@ -146,7 +155,7 @@ body {
 		}
 
 		p {
-			margin: 0px 0px rem(20) 0px;
+			margin: 0px 0px em(22) 0px;
 		}
 
 		figure {
