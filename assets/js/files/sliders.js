@@ -109,6 +109,25 @@ const seealsoSlider = new Swiper('.seealso-slider', {
 });
 
 
+/**
+ * Инициализация слайдера
+ */
+const projectSlider = new Swiper('.project-slider', {
+	speed: 1500,
+	spaceBetween: 0,
+	loop: true,
+	autoplay: {
+		delay: 8000,
+		pauseOnMouseEnter: true,
+		disableOnInteraction: false,
+	},
+	breakpoints: {
+		320: { slidesPerView: 1 },
+		768: { slidesPerView: 2 },
+	}
+});
+
+
 
 
 
