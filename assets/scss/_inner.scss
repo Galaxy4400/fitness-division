@@ -27,3 +27,74 @@
 //===============================================================
 .inner-content {
 }
+
+//===============================================================
+.payment {
+	// .payment__container
+	&__container {
+	}
+	// .payment__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr rem(478);
+		grid-gap: rem(50);
+	}
+	// .payment__column
+	&__column {
+		// .payment__column_info
+		&_info {
+		}
+		// .payment__column_form
+		&_form {
+		}
+	}
+	// .payment__image
+	&__image {
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .payment__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+		text-transform: none;
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .payment__text
+	&__text {
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .payment__quote
+	&__quote {
+		background: #E6E8ED;
+		padding: rem(23) rem(30);
+		font-style: italic;
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .payment__steps
+	&__steps {
+	}
+}
+
+//===============================================================
+.payment-steps {
+	padding: rem(15) 0px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: rem(30);
+	// .payment-steps__step
+	&__step {
+		flex: 0 0 rem(220);
+	}
+	// .payment-steps__title
+	&__title {
+		color: var(--color-main);
+		@include adaptiv-value(font-size, 30, 26, 1);
+		white-space: nowrap;
+		font-weight: 700;
+		margin: 0px 0px rem(15) 0px;
+	}
+	// .payment-steps__label
+	&__label {
+	}
+}
+
+//===============================================================

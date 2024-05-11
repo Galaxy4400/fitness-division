@@ -1375,7 +1375,6 @@ swiper-container .swiper-notification {
   background-color: #ffffff;
   padding: 0.3125rem 2.8125rem 0.3125rem 0.75rem;
   border: 0.0625rem solid #cccccc;
-  border-radius: 0.25rem;
   font-size: 1rem;
   min-height: 2.6875rem;
   overflow: hidden;
@@ -4980,7 +4979,7 @@ textarea {
   font-size: 1rem;
   line-height: 125%;
   padding: 0.625em 0.75em;
-  height: 2.6875em;
+  height: 2.875em;
   color: #000000;
   background: #ffffff;
   border: 0.0625rem solid #cccccc;
@@ -5016,7 +5015,7 @@ textarea {
 textarea.input {
   resize: none;
   padding: 0.625em;
-  min-height: 3.75em;
+  min-height: 9.375em;
 }
 
 /**
@@ -5037,8 +5036,7 @@ textarea.input {
           flex-direction: row-reverse;
   padding: 0.625em 0.75em;
   background: #ffffff;
-  border: 0.0625rem solid #cccccc;
-  border-radius: 0.25rem;
+  border: 0.0625rem solid #ECECEC;
 }
 @media (max-width: 479px) {
   .input-file {
@@ -5350,7 +5348,7 @@ textarea.input {
 }
 .form__row {
   display: grid;
-  grid-gap: 1rem 2rem;
+  grid-gap: 1.5625rem;
   min-width: 0;
   grid-template-columns: repeat(1, 1fr);
 }
@@ -5387,8 +5385,8 @@ textarea.input {
 }
 .form__label-title {
   cursor: pointer;
-  margin: 0px 0px 0.3125em 0px;
-  color: #000000;
+  margin: 0px 0px 0.625rem 0px;
+  font-size: 0.875rem;
 }
 .form__label-title::after {
   content: attr(data-req);
@@ -5399,6 +5397,32 @@ textarea.input {
   font-size: 0.875rem;
   font-style: italic;
   color: var(--color-error);
+}
+.form__btn {
+  text-transform: uppercase;
+}
+.question-form {
+  background: #F6F6F6;
+  padding: 2.5rem;
+}
+.question-form__header {
+  text-align: center;
+  margin: 0px 0px 1.5625rem 0px;
+}
+.question-form__icon {
+  color: var(--color-main);
+  font-size: 6.5625rem;
+  margin: 0px 0px 1.5625rem 0px;
+}
+.question-form__title {
+  font-size: 24px;
+  text-transform: none;
+  margin: 0px 0px 1.5625rem 0px;
+}
+@media (max-width: 1602px) {
+  .question-form__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
+  }
 }
 /**
  * Стили галлерей
@@ -6012,7 +6036,7 @@ textarea.input {
             box-shadow: 4px 0px 8px 0px rgba(34, 60, 80, 0.2);
     overflow-x: hidden;
     overflow-y: auto;
-    padding: 1.25rem 0.9375rem;
+    padding: 1.25rem 0.9375rem 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -7056,6 +7080,59 @@ textarea.input {
 .inner-header__body {
   display: grid;
   grid-gap: 1.25rem;
+}
+.payment__body {
+  display: grid;
+  grid-template-columns: 1fr 29.875rem;
+  grid-gap: 3.125rem;
+}
+.payment__image {
+  margin: 0px 0px 1.5625rem 0px;
+}
+.payment__title {
+  font-size: 24px;
+  text-transform: none;
+  margin: 0px 0px 1.875rem 0px;
+}
+@media (max-width: 1602px) {
+  .payment__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
+  }
+}
+.payment__text {
+  margin: 0px 0px 1.5625rem 0px;
+}
+.payment__quote {
+  background: #E6E8ED;
+  padding: 1.4375rem 1.875rem;
+  font-style: italic;
+  margin: 0px 0px 1.5625rem 0px;
+}
+.payment-steps {
+  padding: 0.9375rem 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 1.875rem;
+}
+.payment-steps__step {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 13.75rem;
+          flex: 0 0 13.75rem;
+}
+.payment-steps__title {
+  color: var(--color-main);
+  font-size: 30px;
+  white-space: nowrap;
+  font-weight: 700;
+  margin: 0px 0px 0.9375rem 0px;
+}
+@media (max-width: 1602px) {
+  .payment-steps__title {
+    font-size: calc(26px + 4 * (100vw - 320px) / 1282);
+  }
 }
 .categories__body {
   display: grid;
