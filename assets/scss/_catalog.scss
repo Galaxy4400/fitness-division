@@ -190,27 +190,6 @@
 	&__cards {
 		margin: 0px 0px rem(40) 0px;
 	}
-	// .catalog__footer
-	&__footer {
-		display: grid;
-		justify-items: center;
-		grid-gap: rem(40);
-	}
-	// .catalog__more
-	&__more {
-		color: #6A6A6A;
-		text-align: center;
-		font-size: rem(15);
-		line-height: 1;
-		display: inline-block;
-		border-bottom: rem(2) dotted #6A6A6A;
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--color-main);
-				border-bottom: rem(2) dotted var(--color-main);
-			}
-		}
-	}
 	// .catalog__pagging
 	&__pagging {
 	}

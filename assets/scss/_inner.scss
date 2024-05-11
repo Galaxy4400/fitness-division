@@ -225,3 +225,28 @@
 		justify-content: center;
 	}
 }
+
+//===============================================================
+.paggination {
+	display: grid;
+	justify-items: center;
+	grid-gap: rem(40);
+	// .paggination__more
+	&__more {
+		color: #6A6A6A;
+		text-align: center;
+		font-size: rem(15);
+		line-height: 1;
+		display: inline-block;
+		border-bottom: rem(2) dotted #6A6A6A;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main);
+				border-bottom: rem(2) dotted var(--color-main);
+			}
+		}
+	}
+	// .paggination__pagging
+	&__pagging {
+	}
+}
