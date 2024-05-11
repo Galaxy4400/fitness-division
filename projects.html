@@ -263,13 +263,56 @@
 
 	
 	<div id="modal">
+
+		<div class="modal-form-sended" data-modal="modal-form-sended">
+			<p class="h2 left-line">Форма отправлена</p>
+		</div>
 	
 		<div class="modal-defaut" data-modal="modal-consult">
 			<p class="h2 left-line">Форма заказа консультации</p>
 		</div>
 		
 		<div class="modal-defaut" data-modal="modal-request">
-			<p class="h2 left-line">Форма заказа звонка</p>
+			<div class="question-form">
+				<header class="question-form__header">
+					<div class="question-form__icon _icon-question"></div>
+					<h4 class="question-form__title">Остались вопросы?</h4>
+					<div class="question-form__label">Оставьте заявку и наш менеджер ответит на все ваши вопросы</div>
+				</header>
+				<form class="form form_question" name="form" action="./" method="post" data-form data-send="test" data-validation data-after="openSendedModal" data-autocomplete-off>
+					<div class="form__section">
+						<div class="form__row">
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Ваше имя</span>
+									<input class="form__input input" type="text" name="name" required>
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Телефон</span>
+									<input class="form__input input" type="tel" name="phone" required data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Почта</span>
+									<input class="form__input input" type="email" name="email" required>
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Комментарий</span>
+									<textarea class="form__input input" name="comment"></textarea>
+								</label>
+							</div>
+							<div class="form__column">
+								<button class="form__btn btn btn_fw" type="submit">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
 		</div>
 	
 	</div>

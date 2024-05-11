@@ -106,97 +106,82 @@
 							<nav class="breadcrumbs">
 								<ul class="breadcrumbs__list">
 									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
-									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="О компании">О компании</a></li>
-									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Оплата">Оплата</span></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="Сервис">Сервис</span></li>
 								</ul>
 							</nav>
-							<h2 class="inner-header__title left-line">Оплата</h2>
+							<h2 class="inner-header__title left-line">Сервис</h2>
 						</div>
 					</div>
 				</header>
 
 				<div class="page-inner__content inner-content">
-					
-					<div class="payment">
-						<div class="payment__container _container">
-							<div class="payment__body">
-								<div class="payment__column payment__column_info">
-									<figure class="payment__image">
-										<img src="assets/img/inner/1.jpg" alt="payment">
-									</figure>
-									<h4 class="payment__title">Безналичный расчет</h4>
-									<div class="payment__text">
-										<p><b>Юридическим лицам (организациям)</b> предоставляется оплата по безналичному расчету на основании выставленного счета.</p>
-										<p>Товар будет доступен к отгрузке со склада или доставке после поступления денежных средств на наш счет.</p>
-										<p>Помните, что при получении товара необходимо иметь при себе доверенность или печать организации.</p>
-									</div>
-									<div class="payment__quote">Помните, что при получении товара необходимо иметь при себе доверенность или печать организации.</div>
-									<div class="payment__text">
-										<p><b>Частным лицам</b> предоставляется оплата по безналичному расчету на основании выставленного счета.</p>
-										<p>Товар будет доступен к отгрузке со склада или доставке после поступления денежных средств на наш счет.</p>
-										<p>Помните, что при получении товара необходимо иметь при себе паспорт.</p>
-									</div>
-									<div class="payment__quote">Помните, что при получении товара необходимо иметь при себе паспорт.</div>
-									<div class="payment__steps payment-steps">
-										<div class="payment-steps__step">
-											<div class="payment-steps__title">1 шаг</div>
-											<div class="payment-steps__label">Оставить заявку на сайте на заинтересовавшийся Вам продукт.</div>
-										</div>
-										<div class="payment-steps__step">
-											<div class="payment-steps__title">2 шаг</div>
-											<div class="payment-steps__label">Оплатить выставленный Вам счет на оборудование.</div>
-										</div>
-										<div class="payment-steps__step">
-											<div class="payment-steps__title">3 шаг</div>
-											<div class="payment-steps__label">Прислать менеджеру подтверждение об оплате.</div>
-										</div>
-										<div class="payment-steps__step">
-											<div class="payment-steps__title">4 шаг</div>
-											<div class="payment-steps__label">Выбрать способ отгрузки: самовывоз со склада или доставка.</div>
-										</div>
-									</div>
-								</div>
-								<div class="payment__column payment__column_form">
-									<div class="question-form">
-										<header class="question-form__header">
-											<div class="question-form__icon _icon-question"></div>
-											<h4 class="question-form__title">Остались вопросы?</h4>
-											<div class="question-form__label">Оставьте заявку и наш менеджер ответит на все ваши вопросы</div>
-										</header>
-										<form class="form form_question" name="form" action="./" method="post" data-form data-send="test" data-validation data-after="openSendedModal" data-autocomplete-off>
-											<div class="form__section">
-												<div class="form__row">
-													<div class="form__column">
-														<label class="form__label">
-															<span class="form__label-title">Ваше имя</span>
-															<input class="form__input input" type="text" name="name" required>
-														</label>
-													</div>
-													<div class="form__column">
-														<label class="form__label">
-															<span class="form__label-title">Телефон</span>
-															<input class="form__input input" type="tel" name="phone" required data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
-														</label>
-													</div>
-													<div class="form__column">
-														<label class="form__label">
-															<span class="form__label-title">Почта</span>
-															<input class="form__input input" type="email" name="email" required>
-														</label>
-													</div>
-													<div class="form__column">
-														<label class="form__label">
-															<span class="form__label-title">Комментарий</span>
-															<textarea class="form__input input" name="comment"></textarea>
-														</label>
-													</div>
-													<div class="form__column">
-														<button class="form__btn btn btn_fw" type="submit">Отправить</button>
-													</div>
+
+					<div class="service">
+						<div class="service__container _container">
+							<div class="service__body">
+								<div class="service-form">
+									<header class="service-form__header">
+										<div class="service-form__icon _icon-service"></div>
+										<h4 class="service-form__title">Запрос в сервис</h4>
+									</header>
+									<form class="form form_service" name="form" action="./" method="post" data-form data-send="test" data-validation data-after="openSendedModal" data-autocomplete-off>
+										<div class="form__section">
+											<div class="form__row">
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Название и модель</span>
+														<input class="form__input input" type="text" name="model" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Серийный номер</span>
+														<input class="form__input input" type="text" name="code" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Название клуба</span>
+														<input class="form__input input" type="text" name="club" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Адрес клуба</span>
+														<input class="form__input input" type="text" name="address" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Описание неисправности</span>
+														<textarea class="form__input input" name="comment" required></textarea>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Контактное лицо</span>
+														<input class="form__input input" type="text" name="name" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Телефон</span>
+														<input class="form__input input" type="tel" name="Phone" required data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
+													</label>
+												</div>
+												<div class="form__column">
+													<label class="form__label">
+														<span class="form__label-title">Почта</span>
+														<input class="form__input input" type="email" name="email" required>
+													</label>
+												</div>
+												<div class="form__column">
+													<button class="form__btn btn btn_fw" type="submit">Отправить</button>
+													<p class="form__sub-text">Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь с политикой конфиденциальности.</p>
 												</div>
 											</div>
-										</form>
-									</div>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>

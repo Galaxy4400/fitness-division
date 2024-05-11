@@ -33,32 +33,32 @@ class Modal {
 
 		if (!this.modalsContainer) return;
 
-		this.#events();
+		this.events();
 	}
 	
 
 	/**
 	 * Инициализация событий на основном контейнере модальных окон
 	 */
-	#events() {
+	events() {
 		document.addEventListener('click', function(event) {
 			if (this.isClosing) return;
 
 			this.btnOpenModal = event.target.closest('[data-modal-opener]');
 			if (this.btnOpenModal) {
-				this.#close();
+				this.close();
 				setTimeout(() => {
 					const name = this.btnOpenModal.dataset.modalOpener;
 					const source = this.btnOpenModal.dataset.src !== undefined ? this.btnOpenModal.dataset.src : false; // В зависимости от типа контента модального окна, будет различаться и значения ресурса контента.
-					this.#initModal(name, source);
-					this.#open();
+					this.initModal(name, source);
+					this.open();
 				}, this.isOpen ? this.speed + 1 : 0);
 				return;
 			}
 
 			const btnCloseModal = event.target.closest('[data-close]');
 			if (btnCloseModal) {
-				this.#close();
+				this.close();
 				return;
 			}
 		}.bind(this));
@@ -66,12 +66,12 @@ class Modal {
 		window.addEventListener('keydown', function(event) {
 			if (event.keyCode == 27) {
 				if (this.isOpen) {
-					this.#close();
+					this.close();
 				}
 			}
 
 			if (event.keyCode == 9 && this.isOpen) {
-				this.#focusCatch(e);
+				this.focusCatch(e);
 				return;
 			}
 
@@ -83,7 +83,7 @@ class Modal {
 			if (event.x >= document.documentElement.clientWidth - offset) return;
 
 			if (!event.target.classList.contains('[data-modal]') && !event.target.closest('[data-modal]') && this.isOpen) {
-				this.#close();
+				this.close();
 			}
 		}.bind(this));
 	}
@@ -92,7 +92,7 @@ class Modal {
 	/**
 	 * Инициализация модального окна перед его открытием
 	 */
-	#initModal(name, source = false) {
+	initModal(name, source = false) {
 		this.modalName = name;
 		this.modal = document.querySelector(`[data-modal="${this.modalName}"]`);
 		
@@ -109,20 +109,20 @@ class Modal {
 	/**
 	 * Открытие модального окна
 	 */
-	#open() {
-		this.#addBtnCloseModal();
+	open() {
+		this.addBtnCloseModal();
 
 		this.previousActiveElement = document.activeElement;
 
 		this.modalsContainer.style.setProperty('--transition-time', `${this.speed / 1000}s`);
 		this.modalsContainer.classList.add(this.classes.active);
 
-		this.#disableScroll();
+		this.disableScroll();
 
 		switch (this.contentType) {
-			case 'dynamic': this.#getDynamicContent(); break;
-			case 'frame': this.#getFrameContent(); break;
-			case 'ajax': this.#getAjaxContent(); break;
+			case 'dynamic': this.getDynamicContent(); break;
+			case 'frame': this.getFrameContent(); break;
+			case 'ajax': this.getAjaxContent(); break;
 		}
 
 		this.modal.classList.add(this.classes.active);
@@ -132,7 +132,7 @@ class Modal {
 		}, 1);
 		setTimeout(() => {
 			this.isOpen = true;
-			this.#focusTrap();
+			this.focusTrap();
 		}, this.isOpen ? this.speed : 0);
 	}
 
@@ -140,7 +140,7 @@ class Modal {
 	/**
 	 * Закрытие модального окна
 	 */
-	#close() {
+	close() {
 		if (!this.modal) return;
 		if (this.isClosing) return;
 
@@ -149,15 +149,15 @@ class Modal {
 		this.modalsContainer.classList.remove(this.classes.active);
 		this.modal.classList.remove(this.classes.animate);
 		setTimeout(() => {
-			this.#removeBtnCloseModal();
+			this.removeBtnCloseModal();
 			if (this.contentType && this.isOpen) {
-				this.#removeContent();
+				this.removeContent();
 			}
 			this.modal.classList.remove(this.animation);
 			this.modal.classList.remove(this.classes.active);
 			this.isOpen = false;
-			this.#enableScroll();
-			this.#focusTrap();
+			this.enableScroll();
+			this.focusTrap();
 			this.isClosing = false;
 		}, this.isOpen ? this.speed : 0);
 	}
@@ -166,7 +166,7 @@ class Modal {
 	/**
 	 * Создание кнопки закрытия в углу открывающегося модального окна
 	 */
-	#addBtnCloseModal() {
+	addBtnCloseModal() {
 		const closeBtn = document.createElement('button');
 		closeBtn.className = `${this.modal.className.split(/\s+/)[0]}__close ${this.classes.btnCloseIcon}`;
 		closeBtn.setAttribute('type', 'button');
@@ -178,7 +178,7 @@ class Modal {
 	/**
 	 * Удаление кнопки закрытия в углу модального окна после его закрытия
 	 */
-	#removeBtnCloseModal() {
+	removeBtnCloseModal() {
 		const firstModalChild = this.modal.firstElementChild;
 		if (firstModalChild?.dataset.close !== undefined)
 			firstModalChild.remove();
@@ -188,7 +188,7 @@ class Modal {
 	/**
 	 * Установка возможности фокусироваться только на элементах открытого модального окна
 	 */
-	#focusCatch(e) {
+	focusCatch(e) {
 		const focusable = this.modal.querySelectorAll(this.focusElements);
 		const focusArray = Array.prototype.slice.call(focusable);
 		const focusedIndex = focusArray.indexOf(document.activeElement);
@@ -208,7 +208,7 @@ class Modal {
 	/**
 	 * Установка фокуса на первом элементе с возможностью фокусировки
 	 */
-	#focusTrap() {
+	focusTrap() {
 		const focusable = this.modal.querySelectorAll(this.focusElements);
 		if (this.isOpen) {
 			focusable[0].focus();
@@ -219,8 +219,8 @@ class Modal {
 	/**
 	 * Запрет скролла при открытом модальном окне
 	 */
-	#disableScroll() {
-		this.#lock();
+	disableScroll() {
+		this.lock();
 		document.body.classList.add(this.classes.lock);
 	}
 
@@ -228,8 +228,8 @@ class Modal {
 	/**
 	 * Разрешить скролл после закрытия модального окна
 	 */
-	#enableScroll() {
-		this.#unlock();
+	enableScroll() {
+		this.unlock();
 		document.body.classList.remove(this.classes.lock);
 	}
 
@@ -237,7 +237,7 @@ class Modal {
 	/**
 	 * Фиксация абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
 	 */
-	#lock() {
+	lock() {
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
 		const offset = window.innerWidth - document.body.offsetWidth + 'px';
@@ -254,7 +254,7 @@ class Modal {
 	/**
 	 * Отмена Фиксации абсолютно-позиционизируемых элементов содержащих соответствующий атрибут: data-fix, data-fix-m
 	 */
-	#unlock() {
+	unlock() {
 		const fixBlocks = document.querySelectorAll(`[data-fix]`);
 		const fixBlocksM = document.querySelectorAll(`[data-fix-m]`);
 		fixBlocks.forEach((el) => {
@@ -270,7 +270,7 @@ class Modal {
 	/**
 	 * Получение контента при типе модального окна: dynamic
 	 */
-	#getDynamicContent() {
+	getDynamicContent() {
 		if (!this.contentSource) {
 			console.error('Не установлен ресурс контента модального окна');
 			return;
@@ -286,7 +286,7 @@ class Modal {
 	/**
 	 * Получение контента при типе модального окна: ajax
 	 */
-	#getAjaxContent() {
+	getAjaxContent() {
 		if (!this.contentSource) {
 			console.error('Не установлен ресурс контента модального окна');
 			return;
@@ -307,7 +307,7 @@ class Modal {
 	/**
 	 * Получение контента при типе модального окна: frame
 	 */
-	#getFrameContent() {
+	getFrameContent() {
 		if (!this.contentSource) { console.error('Не установлен ресурс контента модального окна'); return; }
 
 		this.modal.classList.add(this.classes.load);
@@ -346,7 +346,7 @@ class Modal {
 	/**
 	 * Удаление динамически подгружаемого контента из модального окна
 	 */
-	#removeContent() {
+	removeContent() {
 		this.modal.innerHTML = null;
 
 		if (this.frameInterval) {
@@ -364,10 +364,10 @@ class Modal {
 	 * @param {string} source - если модальное окно является динамическим, то в source необходимо передать соответствующее значение в соответствии с типом динамического модального окна. См. описание.
 	 */
 	openModal(name, source = false) {
-		this.#close();
+		this.close();
 		setTimeout(() => {
-			this.#initModal(name, source);
-			this.#open();
+			this.initModal(name, source);
+			this.open();
 		}, this.isOpen ? this.speed + 1 : 0);
 	}
 }

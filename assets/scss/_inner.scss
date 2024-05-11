@@ -38,6 +38,9 @@
 		display: grid;
 		grid-template-columns: 1fr rem(478);
 		grid-gap: rem(50);
+		@media (max-width: em($md2)) {
+			grid-template-columns: 1fr;
+		}
 	}
 	// .payment__column
 	&__column {
@@ -98,3 +101,127 @@
 }
 
 //===============================================================
+
+.about {
+	// .about__container
+	&__container {
+	}
+	// .about__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr rem(478);
+		grid-gap: rem(50);
+		@media (max-width: em($md2)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .about__column
+	&__column {
+		// .about__column_info
+		&_info {
+		}
+		// .about__column_form
+		&_form {
+		}
+	}
+	// .about__image
+	&__image {
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .about__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+		text-transform: none;
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .about__text
+	&__text {
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .about__info
+	&__info {
+	}
+}
+
+//===============================================================
+.about-info {
+	padding: rem(15) 0px;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	gap: rem(55) 0;
+	text-align: center;
+	// .about-info__item
+	&__item {
+		padding: 0px rem(55);
+		@media (min-width: em($md0+1)) {
+			&:not(:last-child) {
+				border-right: rem(1) solid var(--color-border);
+			}
+		}
+	}
+	// .about-info__title
+	&__title {
+		color: var(--color-main);
+		@include adaptiv-value(font-size, 60, 34, 1);
+		white-space: nowrap;
+		font-weight: 900;
+		margin: 0px 0px rem(15) 0px;
+		line-height: 1;
+	}
+	// .about-info__label
+	&__label {
+	}
+}
+
+//===============================================================
+.delivery {
+	// .delivery__container
+	&__container {
+	}
+	// .delivery__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr rem(478);
+		grid-gap: rem(50);
+		@media (max-width: em($md2)) {
+			grid-template-columns: 1fr;
+		}
+	}
+	// .delivery__column
+	&__column {
+		// .delivery__column_info
+		&_info {
+		}
+		// .delivery__column_form
+		&_form {
+		}
+	}
+	// .delivery__image
+	&__image {
+		margin: 0px 0px rem(25) 0px;
+	}
+	// .delivery__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+		text-transform: none;
+		margin: 0px 0px rem(30) 0px;
+	}
+	// .delivery__text
+	&__text {
+		margin: 0px 0px rem(25) 0px;
+	}
+}
+
+//===============================================================
+.service {
+	// .service__container
+	&__container {
+	}
+	// .service__body
+	&__body {
+		background: #F6F6F6;
+		display: flex;
+		justify-content: center;
+	}
+}

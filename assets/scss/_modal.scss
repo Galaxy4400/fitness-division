@@ -160,10 +160,7 @@ a[data-modal-opener] {
 	// Собственные стили модальных окон
 
 	.modal-info {
-		width: rem(1200);
-		@media (max-width: em(1300)) {
-			width: 98%;
-		}
+		
 	}
 
 }
