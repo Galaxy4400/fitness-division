@@ -506,6 +506,7 @@ document.querySelectorAll('[data-choice]').forEach((select) => {
 		shouldSort: false,
 		itemSelectText: '',
 		removeItemButton: select.hasAttribute('multiple') ? true : false,
+		allowHTML: true,
 		classNames: {
 			containerOuter: `choices ${selectClassName}`,
 		},

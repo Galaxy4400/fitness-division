@@ -7299,6 +7299,100 @@ textarea.input {
     border-bottom: 0.125rem dotted var(--color-main);
   }
 }
+.contacts__body {
+  display: grid;
+  grid-template-columns: 1fr 29.875rem;
+  grid-gap: 3.125rem;
+}
+@media (max-width: 61.9375em) {
+  .contacts__body {
+    grid-template-columns: 1fr;
+  }
+}
+.contacts__column_info {
+  display: grid;
+  grid-gap: 2.5rem;
+  -ms-flex-line-pack: start;
+      align-content: start;
+}
+@media (max-width: 87.5em) {
+  .contacts__column_info {
+    grid-gap: 3.125rem;
+  }
+}
+.contact-place {
+  display: grid;
+  grid-template-columns: 25.9375rem auto;
+  grid-gap: 1.875rem;
+}
+@media (max-width: 87.5em) {
+  .contact-place {
+    grid-template-columns: 1fr;
+  }
+}
+.contact-place__column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 87.5625em) {
+  .contact-place_reverse .contact-place__column_info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+}
+@media (min-width: 87.5625em) {
+  .contact-place_reverse .contact-place__column_map {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+}
+.contact-place__title {
+  font-size: 24px;
+  font-weight: 700;
+  margin: 0px 0px 1.5625rem 0px;
+}
+@media (max-width: 1602px) {
+  .contact-place__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
+  }
+}
+@media (max-width: 87.5em) {
+  .contact-place__title {
+    margin: 0px 0px 0.9375rem 0px;
+  }
+}
+.contact-place__list {
+  display: grid;
+  grid-gap: 1.25rem;
+}
+@media (max-width: 87.5em) {
+  .contact-place__list {
+    grid-gap: 0.625rem;
+  }
+}
+.contact-place__socials {
+  padding: 0.3125rem 0px 0px 0px;
+}
+.contact-place__socials .social {
+  color: var(--color-font);
+}
+@media (any-hover: hover) {
+  .contact-place__socials .social:hover {
+    color: var(--color-main);
+  }
+}
+@media (min-width: 87.5625em) {
+  .contact-place_reverse {
+    grid-template-columns: auto 25.9375rem;
+  }
+}
+
 .categories__body {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
