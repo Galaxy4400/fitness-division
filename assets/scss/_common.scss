@@ -158,11 +158,16 @@ body {
 			margin: 0px 0px em(22) 0px;
 		}
 
+		img {
+			margin: 0px 0px rem(25) 0px;
+		}
+
 		figure {
 			display: inline-block;
 			margin: 0px 0px rem(20) 0px;
 			img {
 				border-radius: rem(5);
+				margin: 0px 0px 0px 0px;
 			}
 		}
 

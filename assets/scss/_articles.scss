@@ -19,8 +19,8 @@
 			grid-template-columns: repeat(auto-fill, minmax(rem(290), 1fr));
 		}
 	}
-	// .articles__item
-	&__item {
+	// .articles__card
+	&__card {
 		
 	}
 }
@@ -68,10 +68,10 @@
 }
 
 //===============================================================
-.article {
+.article-card {
 	display: grid;
 	grid-template-rows: auto 1fr;
-	// .article__image
+	// .article-card__image
 	&__image {
 		display: block;
 		padding: 0px 0px prc(239, 384) 0px;
@@ -88,34 +88,34 @@
 			}
 		}
 	}
-	// .article__content
+	// .article-card__content
 	&__content {
 		padding: rem(18) rem(20) rem(32);
 		background: var(--color-background);
 	}
-	// .article__header
+	// .article-card__header
 	&__header {
 		margin: 0px 0px rem(15) 0px;
 		display: grid;
 		grid-gap: rem(8);
 	}
-	// .article__date
+	// .article-card__date
 	&__date {
 		color: var(--color-font-light);
 	}
-	// .article__title
+	// .article-card__title
 	&__title {
 	}
-	// .article__text
+	// .article-card__text
 	&__text {
 		margin: 0px 0px rem(20) 0px;
 	}
-	// .article__footer
+	// .article-card__footer
 	&__footer {
 		display: flex;
 		justify-content: flex-end;
 	}
-	// .article__link
+	// .article-card__link
 	&__link {
 		position: relative;
 		font-size: rem(14);
@@ -134,26 +134,26 @@
 	}
 
 	@media (min-width: em($md3+1)) {
-		// .article_row-reverce
+		// .article-card_row-reverce
 		&_row-reverce {
 			min-height: rem(256);
-			grid-template-columns: 4fr 3fr;
+			grid-template-columns: 5fr 4fr;
 			grid-template-rows: 1fr;
-			.article__image {
+			.article-card__image {
 				order: 2;
 			}
-			.article__content {
+			.article-card__content {
 				padding: rem(28) rem(24);
 				order: 1;
 			}
 		}
 	
-		// .article_row
+		// .article-card_row
 		&_row {
 			min-height: rem(256);
-			grid-template-columns: 3fr 4fr;
+			grid-template-columns: 4fr 5fr;
 			grid-template-rows: 1fr;
-			.article__content {
+			.article-card__content {
 				padding: rem(28) rem(24);
 			}
 		}
@@ -161,42 +161,42 @@
 }
 
 //===============================================================
-.main-article {
+.main-article-card {
 	max-width: rem(406);
 	@media (max-width: em($md1)) {
 		max-width: rem(800);
 	}
-	// .main-article__content
+	// .main-article-card__content
 	&__content {
 		padding: rem(18) rem(20) rem(32);
 	}
-	// .main-article__header
+	// .main-article-card__header
 	&__header {
 		margin: 0px 0px rem(15) 0px;
 		display: grid;
 		grid-gap: rem(8);
 	}
-	// .main-article__date
+	// .main-article-card__date
 	&__date {
 		color: #BDBDBD;
 	}
-	// .main-article__title
+	// .main-article-card__title
 	&__title {
 		a {
 			color: #fff;
 		}
 	}
-	// .main-article__text
+	// .main-article-card__text
 	&__text {
 		margin: 0px 0px rem(20) 0px;
 		color: #fff;
 	}
-	// .main-article__footer
+	// .main-article-card__footer
 	&__footer {
 		display: flex;
 		justify-content: flex-end;
 	}
-	// .main-article__link
+	// .main-article-card__link
 	&__link {
 		position: relative;
 		font-size: rem(14);
@@ -215,3 +215,68 @@
 	}
 }
 
+//===============================================================
+.article {
+	// .article__container
+	&__container {
+	}
+	// .article__body
+	&__body {
+		display: grid;
+		grid-template-columns: 1fr auto;
+		grid-gap: rem(50);
+		@media (max-width: em($md1)) {
+			grid-template-columns: 1fr;
+		}
+		@media (max-width: em($md4)) {
+			grid-gap: rem(25);
+		}
+	}
+	// .article__content
+	&__content {
+	}
+	// .article__aside
+	&__aside {
+	}
+	// .article__popular
+	&__popular {
+	}
+}
+
+//===============================================================
+.article-popular {
+	background: var(--color-background);
+	padding: rem(40);
+	display: grid;
+	grid-gap: rem(25);
+	@media (min-width: em($md1+1)) {
+		max-width: rem(478);
+	}
+	@media (max-width: em($md4)) {
+		padding: rem(20);
+	}
+	// .article-popular__title
+	&__title {
+		@include adaptiv-value(font-size, 24, 20, 1);
+		text-transform: none;
+		font-weight: 500;
+	}
+	// .article-popular__list
+	&__list {
+		display: grid;
+		grid-gap: rem(25);
+	}
+	// .article-popular__item
+	&__item {
+	}
+	// .article-popular__footer
+	&__footer {
+	}
+	// .article-popular__btn
+	&__btn {
+		text-transform: uppercase;
+		@media (max-width: em($md1)) {
+			max-width: rem(400);
+		}
+	}
+}

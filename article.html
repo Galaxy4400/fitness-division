@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<title>Fitness Division</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script>
+		const LOCALIZATION = 'Russian'; // English, Spanish... Ключ локализации. При необходимости изменять в соответствии с ответом сервера.
+	</script>
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header" data-fix>
+			<div class="header__top header-top" data-adapt="menu__body,991">
+				<div class="header-top__container _container">
+					<div class="header-top__menu">
+						<nav class="top-menu" data-menu="top-menu">
+							<ul class="top-menu__list" data-menu-container="top-menu">
+								<li class="top-menu__item" data-menu-item>
+									<a class="top-menu__link" href="#">О компании</a>
+									<button class="top-menu__arrow _icon-arrow-down" type="button" data-menu-control></button>
+									<ul class="top-menu__sub-list" data-menu-submenu>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Оплата</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Доставка</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">Статьи</a></li>
+										<li class="top-menu__sub-item" data-menu-item><a class="top-menu__sub-link" href="#">О компании</a></li>
+									</ul>
+								</li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Сервис</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Дилерам</a></li>
+								<li class="top-menu__item" data-menu-item><a class="top-menu__link" href="#">Контакты</a></li>
+							</ul>
+						</nav>
+					</div>
+					<div class="header-top__socials">
+						<div class="header-socials">
+							<a class="header-socials__social social _icon-wu" href="#"></a>
+							<a class="header-socials__social social _icon-vk" href="#"></a>
+							<a class="header-socials__social social _icon-tg" href="#"></a>
+						</div>
+					</div>
+					<div class="header-top__actions">
+						<a class="header-tel" href="tel:84957405100">8 (495) 740-51-00</a>
+						<button class="header-request" data-modal-opener="modal-request">Заказать звонок</button>
+					</div>
+				</div>
+			</div>
+			<div class="header__bottom header-bottom">
+				<div class="header-bottom__container _container">
+					<div class="header-bottom__logo">
+						<a class="header-logo" href="#">
+							<img src="assets/img/logo.svg" alt="logo">
+						</a>
+					</div>
+					<div class="header-bottom__menu">
+						<div class="menu" data-menu="main-menu">
+							<nav class="menu__body" data-menu-container="main-menu">
+								<figure class="menu__logo">
+									<img src="assets/img/logo.svg" alt="logo">
+								</figure>
+								<ul class="menu__list">
+									<li class="menu__item" data-menu-item>
+										<div class="menu__control">
+											<button class="menu__arrow _icon-cat-menu" type="button" data-menu-control></button>
+											<a class="menu__link" href="#">каталог оборудования</a>
+										</div>
+										<ul class="menu__sub-list" data-menu-submenu>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Кардиотренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Силовые тренажеры</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Свободные веса</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Функциональный тренинг</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Групповые программы</a></li>
+											<li class="menu__sub-item" data-menu-item><a class="menu__sub-link" href="#">Fitbench</a></li>
+										</ul>
+									</li>
+									<li class="menu__item" data-menu-item><a class="menu__link" href="#">бренды</a></li>
+									<li class="menu__item" data-menu-item><a class="menu__link _active" href="#">проекты</a></li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="header-bottom__actions">
+						<form class="search _active" action="#" method="get" data-adapt="menu__body,767">
+							<input class="search__input input" type="text" name="s" placeholder="Поиск">
+							<button class="search__btn _icon-search" type="submit"></button>
+						</form>
+						<a class="cart-btn cart-btn_counter btn _icon-cart" href="#" data-qty="2"><span>Корзина</span></a>
+						<button class="menu-icon" type="button" data-menu-icon="main-menu"></button>
+					</div>
+				</div>
+			</div>
+		</header>
+		
+		<main class="page">
+			
+			<section class="page__inner page-inner">
+
+				<header class="page-inner__header inner-header">
+					<div class="inner-header__container _container">
+						<div class="inner-header__body">
+							<nav class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Главная">Главная</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="О компании">О компании</a></li>
+									<li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#" title="Статьи">Статьи</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__current" title="TRUE FITNESS TECHNOLOGY, INC. приобрел бренд OCTANE FITNESS">TRUE FITNESS TECHNOLOGY, INC. приобрел бренд OCTANE FITNESS</span></li>
+								</ul>
+							</nav>
+							<h2 class="inner-header__title left-line">TRUE FITNESS TECHNOLOGY, INC. приобрел бренд OCTANE FITNESS</h2>
+						</div>
+					</div>
+				</header>
+
+				<div class="page-inner__content inner-content">
+
+					<div class="article">
+						<div class="article__container _container">
+							<div class="article__body">
+								<div class="article__content _special-styles">
+									<img src="assets/img/inner/4.jpg" alt="article">
+									<p>14.10.2020 <b>TRUE FITNESS</b> анонсировал приобретение бренда <b>Octane Fitness</b>. В Компании ожидают, что <b>Octane</b> станет отличным дополнением к уже существующему премиальному модельному ряду, а потребители, приверженные обоим торговым маркам получат более широкий выбор инновационного оборудования для фитнеса и преимущества безупречного клиентского сервиса <b>TRUE</b>.</p>
+									<p>Ниже приведен перевод официального письма, размещенного на сайте <a href="#">truefitness.com</a> Сент-Луис, Миссури, 14 октября 2020 – Фрэнк Труласке (Frank Trulaske), CEO компании <b>TRUE Fitness Technology, Inc.(TRUE)</b>, глобального поставщика премиального фитнес оборудования, объявил сегодня, что <b>TRUE</b> приобрел бренд <b>Octane Fitness</b> у <b>Nautilus, Inc</b>.</p>
+									<p>Компания <b>Octane Fitness (Octane)</b>, лидер в разработке эллиптических тренажеров, была основана в 2001 году как производитель премиальных кардио-тренажеров с низкой нагрузкой на суставы для домашнего и коммерческого использования.</p>
+									<p>«Бренд <b>Octane</b> широко известен благодаря своим превосходным продуктам и сервису. Его история основана на страсти к фитнесу и инновациям. Мы считаем, что это четко согласовывается с нашей собственной 40-летней экспертизой, фокусом <b>TRUE</b> на производство оборудования высокого класса и приверженностью своим дилерам и конечным потребителям. Дополнение нашей линии тренажеров оборудованием <b>Octane</b> в дальнейшем усилит наше продуктовое предложение. Такая комбинация позволит нам обслуживать весь спектр тренажерного рынка включая домашний, коммерческий и международный,» - говорит Фрэнк Труласке.</p>
+									<p>Продолжая, Труласке подчеркивает: «Приобретение <b>Octane</b> усиливает нашу развивающуюся лидерскую позицию в индустрии и расширяет наше растущее портфолио. Теперь мы сможем применять наш опыт и достижения совместно с этими инновационными продуктами. Потребители <b>Octane</b>, существующие и будущие, могут рассчитывать на клиенто-ориентированный подход <b>TRUE</b>, являющийся нашей визитной карточкой с 1981 года.»</p>
+									<p><b>TRUE</b> продолжит находиться в частном владении, управление всеми бизнес-процессами останется в г. Сент-Луис, США. «Мы рады возможности предоставить нашим клиентам расширенный каталог специализированных продуктов и ускорить наши собственные инициативы по развитию. Каналы дистрибуции <b>Octane</b> и <b>TRUE</b> исторически никогда не пересекались, поэтому комбинация <b>TRUE</b>-<b>Octane</b> откроет новые возможности как для <b>TRUE</b>, так и нашей обширной дилерской сети. Кроме того, мы счастливы пополнить нашу команду талантливыми специалистами из <b>Octane</b>» - отметил Майк Келли (Mike Kelly), Вице-Президент по продажам Компании <b>TRUE</b>.</p>
+									<p>О <b>TRUE</b></p>
+									<p><b>TRUE</b> производит премиальное фитнес-оборудование с 1981 года. Компания опирается на принцип приоритета интересов потребителя, применяя его во всех аспектах ее деятельности, включая разработку, производство и обслуживание кардио- и силовых тренажеров, а также оборудования для функционального тренинга. Узнать как чуткий клиентский сервис, экспертиза в производстве оборудования с превосходным качеством и дизайном может сделать <b>TRUE</b> вашим доверенным партнером вы можете посетив наш сайт <a href="#">truefitness.com</a></p>
+									<p>Источник <a href="https://truefitness.com/resources/true-fitness-technology-inc-acquires-octane-fitness/">https://truefitness.com/resources/true-fitness-technology-inc-acquires-octane-fitness/</a></p>
+									<p><b>FITNESS DIVISION</b> - официальный дилер <b>TRUE FITNESS</b> в России с 2013 года, представляющий кардио- и силовые тренажеры коммерческого и легкого коммерческого класса. Наша компания авторизована осуществлять поставку тренажеров и запасных частей <b>TRUE</b> из США, выполнять их техническое обслуживание, гарантийный ремонт и маркетинговую поддержку покупателей.</p>
+								</div>
+								<aside class="article__aside">
+									<nav class="article__popular article-popular">
+										<h3 class="article-popular__title">Популярные статьи</h3>
+										<ul class="article-popular__list">
+											<li class="article-popular__item">
+												<h4 class="left-line"><a href="#">4 шага чтобы подобрать идеальную конфигурацию ATLAS®</a></h4>
+											</li>
+											<li class="article-popular__item">
+												<h4 class="left-line"><a href="#">Новинка от TRUE: комплекс для функционального тренинга ATLAS®</a></h4>
+											</li>
+											<li class="article-popular__item">
+												<h4 class="left-line"><a href="#">TRUE FITNESS TECHNOLOGY, INC. приобрел бренд OCTANE FITNESS</a></h4>
+											</li>
+											<li class="article-popular__item">
+												<h4 class="left-line"><a href="#">ПХК ЦСКА приобрел велотренажеры TRUE UCS900</a></h4>
+											</li>
+										</ul>
+										<div class="article-popular__footer">
+											<a class="article-popular__btn btn btn_fw" href="#">смотреть все статьи</a>
+										</div>
+									</nav>
+								</aside>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+
+			</section>
+
+		</main>
+		
+		<footer class="footer">
+			<div class="footer__top footer-top">
+				<div class="footer-top__container _container">
+					<div class="footer-top__body">
+						<div class="footer-top__column footer-top__column_menu">
+							<nav class="footer-menu">
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link _icon-cat-menu" href="#">КАТАЛОГ оборудования</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КАРДИОТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СИЛОВЫЕ ТРЕНАЖЕРЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ГРУППОВЫЕ ПРОГРАММЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ФУНКЦИОНАЛЬНЫЙ ТРЕНИНГ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">fitbench</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">БРЕНДЫ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ПРОЕКТЫ</a></li>
+								</ul>
+								<ul class="footer-menu__column">
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">О КОМПАНИИ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">СЕРВИС</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">ДИЛЕРАМ</a></li>
+									<li class="footer-menu__item"><a class="footer-menu__link" href="#">КОНТАКТЫ</a></li>
+								</ul>
+							</nav>
+						</div>
+						<div class="footer-top__column footer-top__column_info">
+							<div class="footer-info">
+								<div class="footer-info__header">
+									<figure class="footer-info__logo">
+										<img src="assets/img/logo-white.svg" alt="logo">
+									</figure>
+									<div class="footer-info__socials">
+										<a class="social _icon-wu" href="#"></a>
+										<a class="social _icon-vk" href="#"></a>
+										<a class="social _icon-tg" href="#"></a>
+									</div>
+								</div>
+								<div class="footer-info__contacts">
+									<div class="footer-info__address">121467, Москва, ул. Истринская, 8</div>
+									<a class="footer-info__phone" href="tel:84957405100">8 (495) 740-51-00</a>
+									<button class="footer-info__request" data-modal-opener="modal-request">Заказать звонок</button>
+									<a class="footer-info__email" href="mailto:info@fitdivision.ru">info@fitdivision.ru</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom footer-bottom">
+				<div class="footer-bottom__container _container">
+					<div class="footer-bottom__body">
+						<a class="footer-bottom__link" href="#">Cогласие на обработку персональных данных</a>
+						<a class="footer-bottom__link" href="#">Политика обработки персональных данных</a>
+						<a class="footer-bottom__link" href="#">Договор публичной оферты</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+
+	<button class="move-up _fixed-block" type="button" data-move-up data-goto="wrapper"></button>
+
+	
+	<div id="modal">
+	
+		<div class="modal-form-sended" data-modal="modal-form-sended">
+			<p class="h2 left-line">Форма отправлена</p>
+		</div>
+
+		<div class="modal-defaut" data-modal="modal-consult">
+			<p class="h2 left-line">Форма заказа консультации</p>
+		</div>
+		
+		<div class="modal-defaut" data-modal="modal-request">
+			<div class="question-form">
+				<header class="question-form__header">
+					<div class="question-form__icon _icon-question"></div>
+					<h4 class="question-form__title">Остались вопросы?</h4>
+					<div class="question-form__label">Оставьте заявку и наш менеджер ответит на все ваши вопросы</div>
+				</header>
+				<form class="form form_question" name="form" action="./" method="post" data-form data-send="test" data-validation data-after="openSendedModal" data-autocomplete-off>
+					<div class="form__section">
+						<div class="form__row">
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Ваше имя</span>
+									<input class="form__input input" type="text" name="name" required>
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Телефон</span>
+									<input class="form__input input" type="tel" name="phone" required data-mask="+7 (999) 999-9999" data-mask-placeholder="_" data-mask-between="2">
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Почта</span>
+									<input class="form__input input" type="email" name="email" required>
+								</label>
+							</div>
+							<div class="form__column">
+								<label class="form__label">
+									<span class="form__label-title">Комментарий</span>
+									<textarea class="form__input input" name="comment"></textarea>
+								</label>
+							</div>
+							<div class="form__column">
+								<button class="form__btn btn btn_fw" type="submit">Отправить</button>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	
+	</div>
+	
+
+	<!-- libs -->
+	<script src="assets/js/libs/lazyload.min.js"></script>
+	<script src="assets/js/libs/choices.min.js"></script>
+	<script src="assets/js/libs/nouislider.min.js"></script>
+	<script src="assets/js/libs/inputmask.min.js"></script>
+	<script src="assets/js/libs/justvalidate.min.js"></script>
+	<script src="assets/js/libs/datepicker.min.js"></script>
+	<script src="assets/js/libs/swiper.min.js"></script>
+	<script src="assets/js/libs/lightgallery.min.js"></script>
+	<script src="assets/js/libs/aos.min.js"></script>
+
+	<!-- plugins -->
+	<script src="assets/js/plugins/adapt.js"></script>
+	<script src="assets/js/plugins/menu.js"></script>
+	<script src="assets/js/plugins/modal.js"></script>
+	<script src="assets/js/plugins/tabs.js"></script>
+	<script src="assets/js/plugins/spoiler.js"></script>
+	<script src="assets/js/plugins/rating.js"></script>
+
+	<!-- files -->
+	<script src="assets/js/files/functions.js"></script>
+	<script src="assets/js/files/forms.js"></script>
+	<script src="assets/js/files/sliders.js"></script>
+	<script src="assets/js/files/scroll.js"></script>
+	<script src="assets/js/files/media.js"></script>
+	<script src="assets/js/files/scripts.js"></script>
+
+</body>
+
+</html>
