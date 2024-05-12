@@ -252,6 +252,9 @@
 		@media (max-width: em($md1)) {
 			padding: 0px 0px rem(15) rem(25);
 		}
+		@media (max-width: em($md4)) {
+			padding: 0px rem(50) rem(15) rem(25);
+		}
 	}
 	// .catalog-aside__menu
 	&__menu {

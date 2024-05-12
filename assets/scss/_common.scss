@@ -138,7 +138,9 @@ body {
 			margin: 0px 0px em(30, 34) 0px;
 		}
 		h3 {
-			margin: 0px 0px em(30, 26) 0px;
+			@include adaptiv-value(font-size, 24, 20, 1);
+			margin: 0px 0px em(30, 24) 0px;
+			font-weight: 700;
 		}
 		h4, h5, h6 {
 			margin: 0px 0px rem(15) 0px;

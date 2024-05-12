@@ -322,13 +322,13 @@
 	}
 	// .product-info__content
 	&__content {
-		padding: 0 rem(20);
+		margin: 0 rem(20);
+		border-top: rem(1) solid var(--color-border);
+		padding: rem(20) 0px;
 	}
 }
 //---------------------------------------------------------------
 .product-info-list {
-	border-top: rem(1) solid var(--color-border);
-	padding: rem(20) 0px;
 	// .product-info-list__item
 	&__item {
 		padding: rem(12) rem(20);
