@@ -366,3 +366,41 @@
 		}
 	}
 }
+
+//===============================================================
+.page-404 {
+	padding: rem(95) 0px;
+	@media (max-width: em($md2)) {
+		padding: rem(40) 0px;
+	}
+	// .page-404__container
+	&__container {
+	}
+	// .page-404__body
+	&__body {
+		display: grid;
+		justify-content: center;
+		justify-items: center;
+		grid-gap: rem(30);
+	}
+	// .page-404__image
+	&__image {
+		max-width: rem(330);
+	}
+	// .page-404__content
+	&__content {
+		max-width: rem(400);
+		display: grid;
+		grid-gap: rem(30);
+	}
+	// .page-404__title
+	&__title {
+		text-align: center;
+		@include adaptiv-value(font-size, 24, 20, 1);
+		font-weight: 700;
+	}
+	// .page-404__text
+	&__text {
+		text-align: center;
+	}
+}
