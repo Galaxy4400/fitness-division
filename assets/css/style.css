@@ -9078,12 +9078,34 @@ textarea.input {
     grid-template-columns: 1fr;
   }
 }
+.cart__column_main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 75em) {
+  .cart__column_main {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 .cart__header {
   margin: 0px 0px 0.75rem 0px;
 }
 .cart__items {
   display: grid;
   grid-gap: 0.75rem;
+}
+@media (max-width: 75em) {
+  .cart__items {
+    margin: 0px 0px 1.5625rem 0px;
+  }
 }
 .cart-header {
   display: -webkit-box;
@@ -9109,56 +9131,6 @@ textarea.input {
 @media (any-hover: hover) {
   .cart-header__btn:hover {
     color: var(--color-error);
-  }
-}
-
-.cart-info {
-  background: var(--color-background);
-  padding: 2.5rem;
-}
-@media (min-width: 75.0625em) {
-  .cart-info {
-    min-width: 29.875rem;
-  }
-}
-@media (max-width: 29.9375em) {
-  .cart-info {
-    padding: 1.25rem;
-  }
-}
-.cart-info__list {
-  display: grid;
-  grid-gap: 1.5625rem;
-  margin: 0px 0px 1.5625rem 0px;
-}
-.cart-info__item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  gap: 1.25rem;
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-}
-@media (max-width: 1602px) {
-  .cart-info__item {
-    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
-  }
-}
-.cart-info__btn {
-  text-transform: uppercase;
-}
-@media (min-width: 100.9375em) {
-  .cart-info__btn {
-    height: 4.25rem;
-  }
-}
-@media (max-width: 75em) {
-  .cart-info__btn {
-    max-width: 25rem;
   }
 }
 
@@ -9290,4 +9262,113 @@ textarea.input {
 }
 .cart-item__code {
   color: #939393;
+}
+.order-info {
+  background: var(--color-background);
+  padding: 2.5rem;
+}
+@media (min-width: 75.0625em) {
+  .order-info {
+    min-width: 29.875rem;
+  }
+}
+@media (max-width: 29.9375em) {
+  .order-info {
+    padding: 1.25rem;
+  }
+}
+.order-info__list {
+  display: grid;
+  grid-gap: 0.75rem;
+  margin: 0px 0px 1.25rem 0px;
+}
+.order-info__item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1;
+}
+.order-info__item::before {
+  content: "";
+  position: absolute;
+  bottom: 0.1875rem;
+  left: 0;
+  width: 100%;
+  height: 0.125rem;
+  border-bottom: 0.125rem dotted var(--color-font);
+}
+.order-info__property {
+  position: relative;
+  z-index: 2;
+  background: var(--color-background);
+  padding: 0px 0.1875rem 0px 0px;
+}
+.order-info__value {
+  position: relative;
+  z-index: 2;
+  background: var(--color-background);
+  padding: 0px 0px 0px 0.1875rem;
+}
+.order-info__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.25rem;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0px 0px 1.5625rem 0px;
+}
+@media (max-width: 1602px) {
+  .order-info__result {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
+  }
+}
+.order-info__btn {
+  text-transform: uppercase;
+}
+@media (min-width: 100.9375em) {
+  .order-info__btn {
+    height: 4.25rem;
+  }
+}
+@media (max-width: 75em) {
+  .order-info__btn {
+    max-width: 25rem;
+  }
+}
+
+.order-form {
+  background: var(--color-background);
+  padding: 2.5rem;
+}
+@media (min-width: 75.0625em) {
+  .order-form {
+    margin: 0px 0px 2.5rem 0px;
+  }
+}
+@media (max-width: 29.9375em) {
+  .order-form {
+    padding: 1.25rem;
+  }
+}
+.order-form__title {
+  font-size: 24px;
+  margin: 0px 0px 1.5625rem 0px;
+  text-transform: none;
+  font-weight: 700;
+}
+@media (max-width: 1602px) {
+  .order-form__title {
+    font-size: calc(20px + 4 * (100vw - 320px) / 1282);
+  }
 }
