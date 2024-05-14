@@ -474,6 +474,8 @@ document.querySelectorAll('input[data-qty]').forEach(qtyInput => {
  */
 document.querySelectorAll('[data-choice]').forEach((select) => {
 	
+	const choiceName = select.dataset.choice;
+
 	// Объект локализации для настроек choice
 	const choicesLocalization = {
 		noResultsText: {
@@ -535,6 +537,11 @@ document.querySelectorAll('[data-choice]').forEach((select) => {
 	choice.passedElement.element.addEventListener('change', event => {
 		processChoiceSwitcher(event.detail.value)
 	});
+	
+	if (!document.choices) document.choices = {};
+	if (!document.choices[choiceName]) document.choices[choiceName] = [];
+
+	document.choices[choiceName].push(choice);
 
 	// TODO: Пока что реализована обработка переключателей только у одиночных селекторов. Позже сделать мультиселекты.
 });

@@ -55,6 +55,11 @@ const mainSlider = new Swiper('.main-slider', {
 		bulletActiveClass: '_active',
 		clickable: true,
 	},
+	navigation: {
+		prevEl: '.main-slider__arrow_prev',
+		nextEl: '.main-slider__arrow_next',
+		disabledClass: "_disabled",
+	},
 });
 
 

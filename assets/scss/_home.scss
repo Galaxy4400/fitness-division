@@ -6,6 +6,48 @@
 	// .main-slider__slide
 	&__slide {
 	}
+	// .main-slider__arrows
+	&__arrows {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		width: 100%;
+		transform: translate(-50%, -50%);
+		pointer-events: none;
+		z-index: 3;
+		display: flex;
+		justify-content: space-between;
+		transition: all 0.3s ease 0s;
+		opacity: 0;
+		@media (any-hover: hover) {
+			width: 102%;
+			.main-slider:hover & {
+				width: 100%;
+				opacity: 1;
+			}
+		}
+	}
+	// .main-slider__arrow
+	&__arrow {
+		padding: rem(30);
+		pointer-events: all;
+		font-size: rem(60);
+		cursor: pointer;
+		color: rgba(255, 255, 255, 0.7);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--color-main)
+			}
+		}
+		// .main-slider__arrow_prev
+		&_prev {
+			transform: scale(-1, 1);
+		}
+		// .main-slider__arrow_next
+		&_next {
+		}
+	}
 	// .main-slider__pagination
 	&__pagination {
 		position: absolute;

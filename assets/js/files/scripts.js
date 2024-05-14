@@ -16,7 +16,7 @@ new Menu('cat-menu');
 // Инициализация меню фильтров
 new Menu('filters-menu');
 
-// Инициализация меню фильтров
+// Инициализация спойлера на детальной странице продукта
 new Spoiler('product-info');
 
 
@@ -28,5 +28,22 @@ document.querySelectorAll('input[name="all"]').forEach(mainCheck => {
 			check.checked = mainCheck.checked;
 			check.dispatchEvent(new Event("change"));
 		});
+	});
+});
+
+
+// Инициализация появления кнопки очистки фильтров при выбранных фильтрах
+document.querySelectorAll('.filter select').forEach(select => {
+	select.addEventListener('change', () => {
+		document.querySelector('.filters__btn').classList.add('_active');
+	});
+});
+
+
+// Инициализация кнопки отчистки фильтров
+document.querySelectorAll('.filters__btn').forEach(btn => {
+	btn.addEventListener('click', () => {
+		btn.classList.remove('_active');
+		document.choices.filter.forEach(filterChoice => filterChoice.setChoiceByValue('0'));
 	});
 });

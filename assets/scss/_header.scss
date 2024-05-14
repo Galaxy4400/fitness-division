@@ -253,13 +253,7 @@
 		@media (max-width: em($md4)) {
 			white-space: unset;
 		}
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--color-main);
-			}
-		}
-		&._active {
-			&::before {
+		&::before {
 			content: '';
 			position: absolute;
 			bottom: rem(-3);
@@ -267,7 +261,16 @@
 			width: 100%;
 			height: rem(2);
 			background: var(--color-main);
+			opacity: 0;
+			transition: all 0.3s ease 0s;
 		}
+		@media (any-hover: hover) {
+			color: var(--color-font) !important;
+			&:hover {
+				&::before {
+					opacity: 1;
+				}
+			}
 		}
 	}
 	// .menu__sub-list

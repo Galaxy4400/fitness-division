@@ -189,6 +189,8 @@
 						<button class="catalog__menu-btn" type="button" data-menu-icon="cat-menu">Каталог</button>
 						<button class="catalog__filter-btn" type="button" data-menu-icon="filters-menu">Фильтр</button>
 
+
+
 						<div class="catalog__container _container">
 							<div class="catalog__body">
 								<aside class="catalog__aside catalog-aside" data-menu="cat-menu" data-menu-container="cat-menu">
@@ -196,59 +198,117 @@
 									<h4 class="catalog-aside__title">Каталог оборудования</h4>
 									<nav class="catalog-aside__menu cat-menu">
 										<ul class="cat-menu__list">
-											<li class="cat-menu__item">
-												<a class="cat-menu-item _active" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control _active" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/1.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Кардиотренажеры</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Кардиотренажеры</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Беговые дорожки</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Эллиптические тренажеры</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Велотренажеры</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Степперы / Лестницы</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Гребные тренажеры</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">CROSSFIT-серия</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Сайклы</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
-											<li class="cat-menu__item">
-												<a class="cat-menu-item" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/2.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Силовые тренажеры</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Силовые тренажеры</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 1</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 2</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 3</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
-											<li class="cat-menu__item">
-												<a class="cat-menu-item" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/3.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Свободные веса</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Свободные веса</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 1</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 2</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 3</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
-											<li class="cat-menu__item">
-												<a class="cat-menu-item" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/4.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Функциональный тренинг</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Функциональный тренинг</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 1</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 2</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 3</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
-											<li class="cat-menu__item">
-												<a class="cat-menu-item" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/5.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Групповые программы</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Групповые программы</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 1</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 2</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 3</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
-											<li class="cat-menu__item">
-												<a class="cat-menu-item" href="#">
-													<figure class="cat-menu-item__image _ibg">
+											<li class="cat-menu__item" data-menu-item>
+												<div class="cat-menu__control cat-menu-control" data-menu-control>
+													<figure class="cat-menu-control__image _ibg">
 														<img src="assets/img/catalog/6.webp" alt="catalog">
 													</figure>
-													<h4 class="cat-menu-item__title">Fitbench</h4>
-													<span class="cat-menu-item__arrow _icon-arrow-triangle"></span>
-												</a>
+													<h4 class="cat-menu-control__title"><a href="#">Fitbench</a></h4>
+													<span class="cat-menu-control__arrow _icon-arrow-triangle"></span>
+												</div>
+												<div class="cat-menu__sub-menu" data-menu-submenu>
+													<div class="cat-menu__sub-wrapper">
+														<ul class="cat-menu__sub-list">
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 1</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 2</a></li>
+															<li class="cat-menu__sub-item" data-menu-item><a class="cat-menu__sub-link" href="#">Sub Link 3</a></li>
+														</ul>
+													</div>
+												</div>
 											</li>
 										</ul>
 									</nav>
@@ -263,7 +323,7 @@
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<select name="form[]" data-choice>
+													<select name="form[]" data-choice="filter">
 														<option value="0" selected disabled>Цена</option>
 														<option value="1">Цена (по возрастанию)</option>
 														<option value="2">Цена (по убыванию)</option>
@@ -272,7 +332,7 @@
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<select name="form[]" data-choice>
+													<select name="form[]" data-choice="filter">
 														<option value="0" selected disabled>Бренд</option>
 														<option value="1">Какой-то бренд</option>
 														<option value="2">Ещё один</option>
@@ -282,7 +342,7 @@
 											</div>
 											<div class="filters__item">
 												<div class="filter">
-													<select name="form[]" data-choice>
+													<select name="form[]" data-choice="filter">
 														<option value="0" selected disabled>Серия</option>
 														<option value="1">Какая-то серия</option>
 														<option value="2">Ещё одна</option>
@@ -291,13 +351,13 @@
 												</div>
 											</div>
 											<div class="filters__item" data-adapt="filters__section_right,1200">
-												<button class="filters__btn" type="button">Отчистить фильтр</button>
+												<button class="filters__btn _icon-close" type="button">Очистить фильтр</button>
 											</div>
 										</div>
 										<div class="filters__section filters__section_right">
 											<div class="filters__item">
 												<div class="filter">
-													<select name="form[]" data-choice>
+													<select name="form[]" data-choice="filter">
 														<option value="0" selected disabled>Популярность</option>
 														<option value="1">Популярность (по возрастанию)</option>
 														<option value="2">Популярность (по убыванию)</option>
