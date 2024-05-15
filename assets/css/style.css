@@ -7600,6 +7600,11 @@ textarea.input {
 .rubricator {
   margin: 1.5625rem 0px 2.8125rem 0px;
 }
+@media (max-width: 75em) {
+  .rubricator {
+    display: none;
+  }
+}
 .rubricator__items {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(19.375rem, 1fr));
