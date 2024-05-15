@@ -1,6 +1,9 @@
 class ProductDetailsText {
 	constructor() {
 		this.container = document.querySelector('.product-details-desc');
+
+		if (!this.container) return;
+
 		this.content = this.container.querySelector('.product-details-desc__content');
 		this.text = this.container.querySelector('.product-details-desc__text');
 		this.button = this.container.querySelector('.product-details-desc__btn');
