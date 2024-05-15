@@ -4597,6 +4597,9 @@ body:not(.lg-from-hash) .lg-outer.lg-start-zoom .lg-item:not(.lg-zoomable).lg-co
   display: none;
 }
 
+/**
+ * Ограничение строк текста в блоке
+ */
 ._webkit-box {
   display: -webkit-box;
   -webkit-box-orient: vertical;
