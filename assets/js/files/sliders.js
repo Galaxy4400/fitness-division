@@ -105,6 +105,12 @@ const productGalleryBig = new Swiper('.product-gallery-big', {
 	thumbs: {
 		swiper: productGallerySmall,
 	},
+	pagination: {
+		el: '.product-gallery-big__pagination',
+		bulletClass: 'product-gallery-big__bullet',
+		bulletActiveClass: '_active',
+		clickable: true,
+	},
 });
 
 
@@ -120,8 +126,8 @@ const seealsoSlider = new Swiper('.seealso-slider', {
 		disabledClass: "_disabled",
 	},
 	breakpoints: {
-		320: { slidesPerView: 1 },
-		480: { slidesPerView: 1 },
+		320: { slidesPerView: 'auto' },
+		480: { slidesPerView: 'auto' },
 		768: { slidesPerView: 2 },
 		992: { slidesPerView: 3 },
     1201: { slidesPerView: 3 },

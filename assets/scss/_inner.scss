@@ -197,8 +197,8 @@
 		&_form {
 		}
 	}
-	// .delivery__image
-	&__image {
+	// .delivery__map
+	&__map {
 		margin: 0px 0px rem(25) 0px;
 	}
 	// .delivery__title
@@ -210,6 +210,15 @@
 	// .delivery__text
 	&__text {
 		margin: 0px 0px rem(25) 0px;
+	}
+}
+
+//===============================================================
+#delivery-map {
+	width: 100%;
+	height: rem(500);
+	@media (max-width: em($md3)) {
+		height: rem(300);
 	}
 }
 
@@ -355,8 +364,9 @@
 			}
 		}
 	}
-	// .contact-place__image
-	&__image {
+	// .contact-place__map
+	&__map {
+		width: 100%;
 	}
 
 	// .contact-place_reverse
@@ -366,6 +376,18 @@
 		}
 	}
 }
+
+
+#contact-map-1 {
+	max-width: 100%;
+	height: rem(445);
+}
+
+#contact-map-2 {
+	max-width: 100%;
+	height: rem(445);
+}
+
 
 //===============================================================
 .page-404 {

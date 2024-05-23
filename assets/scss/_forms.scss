@@ -357,6 +357,9 @@ textarea.input {
 	width: em(118);
 	height: em(50);
 	border: rem(1) solid #ECECEC;
+	@media (max-width: em($md4)) {
+		height: em(40);
+	}
 	// .quantity__button
 	&__button {
 		background: #ffffff;
@@ -405,12 +408,15 @@ textarea.input {
 			color: var(--color-font);
 			width: 100%;
 			text-align: center;
-			appearance: 'textfield';
+
+			-moz-appearance: 'textfield' !important;
+
 			&::-webkit-outer-spin-button,
 			&::-webkit-inner-spin-button {
-				appearance: none;
-				margin: 0;
+				-webkit-appearance: none !important;
+				margin: 0 !important;
 			}
+
 			&:focus {
 				color: #000000;
 			}

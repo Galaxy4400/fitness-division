@@ -305,6 +305,9 @@
 	// .cat-menu__sub-link
 	&__sub-link {
 		color: var(--color-font);
+		&._active {
+			color: var(--color-main);
+		}
 	}
 }
 
@@ -315,6 +318,7 @@
 	align-items: center;
 	grid-gap: rem(14);
 	padding: rem(8) rem(20);
+	cursor: pointer;
 	&._active {
 		background: #E6E8ED;
 	}
@@ -341,7 +345,7 @@
 		color: var(--color-font-light);
 		transform: translateY(rem(2));
 		transition: all 0.3s ease 0s;
-		.cat-menu-control._hover & {
+		.cat-menu-control._active & {
 			transform: translateY(rem(2)) rotate(90deg);
 		}
 	}

@@ -154,6 +154,10 @@ body {
 					color: var(--color-main-dark);
 				}
 			}
+
+			&[href^="https://"] {
+				word-break: break-all;
+			}
 		}
 
 		p {

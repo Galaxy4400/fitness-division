@@ -113,7 +113,7 @@
  * Устанавливает блоку бекграунд с анимацией загрузки
  */
 ._loading {
-	background: #000000;
+	background: rgba(0, 0, 0, 0.2);
 	background-image: url("../img/loading.gif");
 	background-position: center;
 	background-repeat: no-repeat;

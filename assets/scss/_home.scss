@@ -26,6 +26,9 @@
 				opacity: 1;
 			}
 		}
+		@media (max-width: em($md3)) {
+			display: none;
+		}
 	}
 	// .main-slider__arrow
 	&__arrow {
