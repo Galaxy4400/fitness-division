@@ -16,6 +16,9 @@ new Menu('cat-menu');
 // Инициализация спойлера меню каталога
 new Spoiler('cat-menu', {single: true});
 
+// Инициализация спойлера каталога в меню хедера
+new Spoiler('cat-menu-header', {single: true});
+
 // Инициализация меню фильтров
 new Menu('filters-menu');
 

@@ -127,6 +127,16 @@
 		font-weight: 700;
 		line-height: 1;
 	}
+	// .product-details__properties
+	&__properties {
+	}
+	// .product-details__brand
+	&__brand {
+		margin: rem(45) 0px 0px 0px;
+		@media (max-width: em($md3)) {
+			margin: rem(25) 0px 0px 0px;
+		}
+	}
 }
 
 //===============================================================
