@@ -254,6 +254,9 @@
 		@media (max-width: em($md4)) {
 			white-space: unset;
 		}
+		@media (max-width: em(360)) {
+			font-size: rem(14);
+		}
 		&::before {
 			content: '';
 			position: absolute;

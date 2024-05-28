@@ -341,12 +341,25 @@
 		img {
 			object-fit: contain;
 		}
+
+		@media (max-width: em(360)) {
+			.menu__cat-menu & {
+				width: rem(40);
+				height: rem(40);
+			}
+		}
 	}
 	// .cat-menu-control__title
 	&__title {
 		transition: all 0.3s ease 0s;
 		.cat-menu-control._active & {
 			color: var(--color-main);
+		}
+
+		@media (max-width: em(360)) {
+			.menu__cat-menu & {
+				font-size: rem(14);
+			}
 		}
 	}
 	// .cat-menu-control__arrow
