@@ -6337,7 +6337,7 @@ textarea.input {
 }
 @media (max-width: 61.9375em) {
   .menu__cat-menu {
-    margin: 1.25rem 0px 0px -0.9375rem;
+    margin: 1.25rem -0.9375rem 0px -0.9375rem;
   }
 }
 .menu__sub-link {

@@ -324,7 +324,7 @@
 	// .menu__cat-menu
 	&__cat-menu {
 		@media (max-width: em($md2)) {
-			margin: rem(20) 0px 0px rem(-15);
+			margin: rem(20) rem(-15) 0px rem(-15);
 		}
 	}
 	// .menu__sub-item
