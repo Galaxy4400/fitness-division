@@ -8758,6 +8758,7 @@ textarea.input {
   line-height: 1;
 }
 .product-details__brand {
+  display: inline-block;
   margin: 2.8125rem 0px 0px 0px;
 }
 @media (max-width: 47.9375em) {
