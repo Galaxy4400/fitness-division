@@ -185,6 +185,15 @@
 	// .catalog__main
 	&__main {
 	}
+	// .catalog__actions
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		@media (max-width: em(1200)) {
+			justify-content: flex-end;
+		}
+	}
 	// .catalog__filters
 	&__filters {
 	}
@@ -449,12 +458,6 @@
 			display: grid;
 			grid-gap: rem(15);
 		}
-		// .filters__section_left
-		&_left {
-		}
-		// .filters__section_right
-		&_right {
-		}
 	}
 	// .filters__item
 	&__item {
@@ -522,64 +525,135 @@
 }
 //---------------------------------------------------------------
 .filter {
-	@media (min-width: em($md1+1)) {
-		.choices {
+	position: relative;
+	// .filter__btn
+	&__btn {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: rem(6);
+		align-items: flex-start;
+		font-size: rem(14);
+		text-align: left;
+		&::before {
+			font-size: rem(6);
+			translate: 0 rem(6);
+			transition: all 0.3s ease 0s;
+		}
+		&._active {
+			color: var(--color-main);
 			&::before {
-				display: none;
+				rotate: 180deg;
 			}
-			&::after {
-				content: "\e900";
-				font-family: "icons";
-				font-style: normal;
-				font-weight: normal;
-				font-variant: normal;
-				text-transform: none;
-				line-height: 1;
-				-webkit-font-smoothing: antialiased;
-				-moz-osx-font-smoothing: grayscale;
-				right: 0;
-				width: auto;
-				height: auto;
-				border: none;
-				font-size: rem(6);
-				transition: all 0.3s ease 0s;
-				transform: translateY(rem(1));
+		}
+		@media (max-width: em(1200)) {
+			gap: rem(10);
+			font-size: rem(20);
+			&::before {
+				font-size: rem(8);
+				translate: 0 rem(8);
 			}
-			&.is-open {
-				&::after {
-					margin: 0;
-					transform: translateY(rem(-3)) rotate(180deg);
-				}
+		}
+	}
+	// .filter__options
+	&__options {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		min-width: rem(230);
+		padding: rem(15) rem(15);
+		background: #e3e3e3;
+		display: grid;
+		grid-gap: rem(10);
+		opacity: 0;
+		visibility: hidden;
+		translate: 0 rem(30);
+		transition: all 0.3s ease 0s;
+		&._active {
+			translate: 0 rem(10);
+			opacity: 1;
+			visibility: visible;
+		}
+		@media (max-width: em(1200)) {
+			display: none;
+			margin: rem(10) 0px 0px 0px;
+			grid-gap: rem(15);
+			position: relative;
+			opacity: 1;
+			visibility: visible;
+			translate: 0 0;
+			&._active {
+				display: grid;
+				translate: 0 0;
 			}
-			// .choices__inner
-			&__inner {
-				padding: 0px rem(17) 0px 0px;
-				border: none;
-				min-height: rem(30);
-				.choices__item {
-					padding: 0 !important;
-				}
+		}
+	}
+}
+
+//---------------------------------------------------------------
+.sorts {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	grid-gap: rem(15) rem(30);
+	margin: 0px 0px rem(15) 0px;
+	background: #fff;
+	// .sorts__section
+	&__section {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: rem(30);
+		@media (max-width: em($md1)) {
+			gap: rem(15);
+		}
+	}
+	// .sorts__item
+	&__item {
+	}
+}
+//---------------------------------------------------------------
+.sort {
+	position: relative;
+	// .sort__btn
+	&__btn {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: rem(6);
+		align-items: center;
+		font-size: rem(14);
+		&::before {
+			font-size: rem(6);
+			translate: 0 rem(1);
+			transition: all 0.3s ease 0s;
+		}
+		&._active {
+			color: var(--color-main);
+			&::before {
+				rotate: 180deg;
 			}
-			// .choices__list
-			&__list {
-				// .choices__list--single
-				&--single {
-					padding: 0;
-					white-space: nowrap;
-				}
-				// .choices__list--dropdown
-				&--dropdown {
-					width: unset;
-					min-width: rem(200);
-				}
-			}
-			// .choices__item
-			&__item {
-				// .choices__item--selectable
-				&--selectable {
-					padding-right: rem(10) !important;
-				}
-			}
+		}
+	}
+	// .sort__options
+	&__options {
+		position: absolute;
+		top: 100%;
+		left: 0;
+		z-index: 10;
+		min-width: rem(230);
+		padding: rem(15) rem(15);
+		background: #e3e3e3;
+		display: grid;
+		grid-gap: rem(10);
+		opacity: 0;
+		visibility: hidden;
+		translate: 0 rem(30);
+		transition: all 0.3s ease 0s;
+		&._active {
+			translate: 0 rem(10);
+			opacity: 1;
+			visibility: visible;
 		}
 	}
 }

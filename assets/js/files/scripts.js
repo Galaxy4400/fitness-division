@@ -42,7 +42,7 @@ document.querySelectorAll('input[name="all"]').forEach(mainCheck => {
 
 
 // Инициализация появления кнопки очистки фильтров при выбранных фильтрах
-document.querySelectorAll('.filter select').forEach(select => {
+document.querySelectorAll('.filter input[type="checkbox"]').forEach(select => {
 	select.addEventListener('change', () => {
 		document.querySelector('.filters__btn').classList.add('_active');
 	});
@@ -52,7 +52,10 @@ document.querySelectorAll('.filter select').forEach(select => {
 // Инициализация кнопки отчистки фильтров
 document.querySelectorAll('.filters__btn').forEach(btn => {
 	btn.addEventListener('click', () => {
+		document.querySelectorAll('.filter input').forEach(check => { 
+			check.checked = false;
+			check.dispatchEvent(new Event("change"));
+		});
 		btn.classList.remove('_active');
-		document.choices.filter.forEach(filterChoice => filterChoice.setChoiceByValue('0'));
 	});
 });

@@ -208,6 +208,12 @@ textarea.input {
 
 	// .check__mark
 	&__mark {
+		display: inline-block;
+		font-size: rem(14);
+		line-height: 1;
+		@media (max-width: em(1200)) {
+			font-size: rem(18);
+		}
 	}
 
 	// .check_default
@@ -218,7 +224,7 @@ textarea.input {
 			&::before {
 				content: '';
 				position: absolute;
-				top: em(-1);
+				top: em(-2);
 				left: em(-30);
 				width: em(20);
 				height: em(20);
@@ -229,7 +235,7 @@ textarea.input {
 			&::after {
 				content: '';
 				position: absolute;
-				top: em(1);
+				top: em(0);
 				left: em(-23);
 				width: em(7);
 				height: em(12);
@@ -285,6 +291,9 @@ textarea.input {
 
 	// .radio__mark
 	&__mark {
+		display: inline-block;
+		font-size: rem(14);
+		line-height: 1;
 	}
 
 	// .radio_default
